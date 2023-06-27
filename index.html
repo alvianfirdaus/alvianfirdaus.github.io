@@ -2,237 +2,772 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/x-icon" href="./images/Logo.png"> 
-
-    <title>Sistem Informasi Alumni</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="1800" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/home.min.css">
+     <link
+      rel="shortcut icon"
+      href="images/logo.png"
+      alt="icon TransTV"
+      title="icon TransTV"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="images/logo.png"
+      alt="icon TransTV"
+      title="icon TransTV"
+    />
+    <title>Alvian Production</title>
 </head>
 <body>
-    <nav>   
-        <div class="wrappe">
-            <div class="logo"><a href='sindex.html'><img src="./Images/headerr.png" width="350px"></a></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#tutors">Pimpinan</a></li>
-                    <li><a href="#partners">Kerja sama</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="LoginPage/login.php">Login</a></li>
-                    <li><a href="SignUp/signup.php" class="tbl-biru">Sign Up</a></li>
-                </ul>
-            </div>
+<header class="header">
+    <div class="header__wrapper">
+      
+      <div class="header__menubar">
+        <img id="open-nav" width="25px" src="images/icon/menu.png" />
+        <span>MENU</span>
+      </div>
+
+      <h1 class="header__logo">
+        <a href="index.html" class="header__logo--ttv">
+          <img src="images/logowhite.png" alt="">
+        </a>
+      </h1>
+
+      <div class="header__nav">
+        <ul class="header__nav__item">
+          <li class="header__nav__item--active">
+            <a href="index.html">home</a>
+          </li>
+          <li  ><a href="live.html" class="anim-text">live</a></li>
+
+          <li ><a href="https://www.transtv.co.id/contact">contact us</a></li>
+
+                          <li><a href="https://www.transtv.co.id/member">SIGN IN</a></li>
+          </ul>
         </div>
-    </nav>
-    <marquee width="100%" direction="left" height="20px" color="#E5E5E5">
-        Sistem Informasi Alumni Polinema disediakan sebagai sarana untuk para alumni 
-        berbagi pengalaman dan informasi tentang dunia kerja.</marquee>
-        
-        <div class="wrapper">
-        <!-- untuk home -->
-        <section id="home">
-            <img src="./Images/tes.PNG"/>
-            <div class="kolom">
-                <p class="deskripsi">Simfoni Polinema #CerdasKompetitif</p>
-                <h2>Selamat Datang Alumni Polinema</h2>
-                <p>Sistem Informasi Alumni Polinema disediakan sebagai sarana untuk para alumni berbagi pengalaman dan informasi tentang dunia kerja.</p>
-                <p><a href="SignUp/signup.php" class="tbl-pink">Register Alumni</a></p>
-            </div>
-        </section>
-        
+      </div>
+      <!--MENU NAVBAR-->
+      
+        <!--MENU NAVBAR-->
+    <div id="mob-nav-menu">
+      <div class="menumob">
+          <div  class="menumob__close">
+            <img id="close-nav" src="images/icon/cross.png" alt="">
+          </div>
+          <div class="menumob__list">
+            <a href="index.html" class="menumob__link">HOME</a>
+            <a href="live.html" class="menumob__link">LIVE</a>
+            <a href="index.html" class="menumob__link">CONTACT US</a>
 
-        <!-- untuk courses -->
-        <section id="courses">
-            <div class="kolom">
-                <p class="deskripsi">Simfoni Polinema</p>
-                <h2>Temukan Pekerjaan Impianmu</h2>
-                <p>Alumni Polinema yang sudah memiliki akun simfoni bisa melakukan login dan mencari lowongan pekerjaan yang tersedia pada laman web simfoni </p>
-                <p>Mensejahtrakan Alumni merupakan kewajiban kami segera lihat lowongan yang cocok untuk anda pada tombol dibawah ini</p>
-                <p><a href="LoginPage/login.php" class="tbl-biru">Login Alumni</a></p>
-            </div>
-            <img src="./Images/jobb.PNG" height="400px"/>
-        </section>
 
-        <!-- untuk tutors -->
-        <section id="tutors">
-            <div class="tengah">
-                <div class="kolom">
-                    <p class="deskripsi">PIMPINAN</p>
-                    <h2>Politeknik Negeri Malang</h2>
-                    <p>Periode 2022-2023</p>
-                </div>
+          </div>
+          <div class="menumob__hr"></div>
+          <div class="menumob__login"> 
 
-                <div class="tutor-list">
-                    <div class="kartu-tutor">
-                        <h3>Direktur</h3>
-                        <img src="./Images/direktur.png"/>
-                        <p> Supriatna Adhisuwignjo, ST., MT.</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <h3>Pudir 1</h3>
-                        <img src="./Images/pudir1.png"/>
-                        <p>Dra. Kurnia Eka Sari, MM., Ak., CA</p></h7>
-                    </div>
-                    <div class="kartu-tutor">
-                        <h3>Pudir 2</h3>
-                        <img src="./Images/pudir2.png"/>
-                        <p>Jaswadi, SE., Ak., M.Si., DBA</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <h3>Pudir 3</h3>
-                        <img src="./Images/pudir3.png"/>
-                        <p>Dr. Eng. Anggit Murdani, ST., M.Eng.</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <h3>Pudir 4</h3>
-                        <img src="./Images/pudir4.png"/>
-                        <p>Ratih Indri Hapsari, ST., MT., Ph.D. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- untuk partners -->
-        <section id="partners">
-            <div class="tengah">
-                <div class="kolom">
-                    <p class="deskripsi">Kerja sama</p>
-                    <h2>Politeknik Negeri Malang</h2>
-                    <p>Kerja sama Polinema dngan dunia industri untuk para alumni </p>
-                </div>
-
-                <div class="partner-list">
-                    <div class="kartu-partner">
-                        <img src="./Images/2.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="./Images/3.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="./Images/4.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="./Images/5.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="./Images/6.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="contact">
-        <div class="wrapper">
-            <div class="footer">
-                <div class="footer-section">
-                    <h4>PROGRAM SARJANA</h4>
-                        <h5>
-                        <ul>Administrasi Bisnis</ul>
-                        <ul>Akuntansi Manajemen</ul>
-                        <ul>Bahasa Inggris untuk Komunikasi Bisnis dan Profesional</ul>
-                        <ul>Keuangan</ul>
-                        <ul>Manajemen Pemasaran</ul>
-                        <ul>Manajemen Rekayasa Konstruksi</ul>
-                        <ul>Pengelolaan Arsip dan Rekaman Informasi</ul>
-                        <ul>Sistem Kelistrikan</ul>
-                        <ul>Teknik Elektronika</ul>
-                        <ul>Teknik Informatika</ul>
-                        <ul>Teknik Jaringan Telekomunikasi Digital</ul>
-                        <ul>Teknologi Kimia Industri</ul>
-                        <ul>Teknik Mesin Produksi dan Perawatan</ul>
-                        <ul>Teknik Otomotif Elektronik</ul>
-                        <ul>Teknologi Rekayasa Konstruksi Jalan dan Jembatan</ul>
-                        <ul>Usaha Perjalanan Wisata</ul>
-                        <ul>Sistem Informasi Bisnis</ul>
-                        <ul>Bahasa Inggris Untuk Industri Pariwisata</ul>
-                        </h5>
-                    
-                </div>
-                <div class="footer-section">
-                    <h4>PROGRAM DIPLOMA</h4>
-                        <h5>
-                        <ul>Magister Terapan Teknik Elektro</ul>
-                        <ul>Administrasi Bisnis</ul>
-                        <ul>Akuntansi</ul>
-                        <ul>Teknik Elektronika</ul>
-                        <ul>Teknik Kimia</ul>
-                        <ul>Teknologi Konstruksi Jalan, Jembatan, dan Bangunan Air</ul>
-                        <ul>Teknik Listrik</ul>
-                        <ul>Teknik Mesin</ul>
-                        <ul>Teknologi Pemeliharaan Pesawat Udara</ul>
-                        <ul>Teknologi Pertambangan</ul>
-                        <ul>Teknik Sipil</ul>
-                        <ul>Teknik Telekomunikasi</ul>
-                        </h5>
-                </div>
-                <div class="footer-section">
-                    <h4>PROGRAM MAGISTER</h4>
-                        <h5>
-                        <ul>Magister Terapan Teknik Elektro</ul>
-                        <ul>Magister Terapan Sistem Informasi Akuntansi</ul>
-                        <ul>Magister Terapan Rekayasa Teknologi Manufaktur</ul>
-                        </h5>
-                        
-                </div>
-                <div class="footer-section">
-                    <h4>PSDKU KOTA KEDIRI</h4>
-                        <h5>
-                        <ul>D-IV Teknik Elektronika</ul>
-                        <ul>D-IV Teknik Mesin Produksi dan Perawatan</ul>
-                        <ul>D-IV Keuangan</ul>
-                        <ul>D-III Teknik Mesin</ul>
-                        <ul>D-III Akuntansi</ul>
-                        <ul>D-III Manajemen Informatika</ul>
-                        </h5>
-                    <p><h4>PSDKU LUMAJANG</h4>
-                        <h5>
-                        <ul>D-IV Teknologi Rekayasa Otomotif</ul>
-                        <ul>D-III Teknologi Sipil</ul>
-                        <ul>D-III Akuntansi</ul>
-                        <ul>D-III Teknologi Informasi</ul></p>
-                        </h5>
-                    <p><h4>PSDKU PAMEKASAN</h4>
-                        <h5>
-                        <ul>D-IV Akuntansi Manajemen</ul>
-                        <ul>D-IV Teknik Otomotif Elektronik</ul>
-                        <ul>D-III Manajemen Informatika</ul></p>
-                        </h5>
-                </div>
-            </div>
-            <div class = "fot">
-                <h4>FOLLOW US</h4>
-                <div class = "sosmed">
-                    <table>
-                        <tr>
-                            <td><img src="./Images/yt.png"></td>
-                            <td><img src="./Images/fb.png"></td>
-                            <td><img src="./Images/tw.png"></td>
-                            <td><img src="./Images/ln.png"></td>
-                        </tr>
-                        <tr>
-                            <td><h5>Youtube</h5></td>
-                            <td><h5>Facebook</h5></td>
-                            <td><h5>Tweeter</h5></td>
-                            <td><h5>Linkedin</h5></td>
-                        </tr></h5>
-                    </table>
-                </div>
-                <img src="./Images/fott.png">
-            </div>
-        </div>
-    </div>
-
-    <div id="copyright">
-        <div class="wrapper">
             
-            Published by <b>Sub. Bagian Akademik Politeknik Negeri Malang</b> © Copyright 2022. All Rights Reserved<P>
-            Develop At <b>Alvian Nur Firdaus</b> & <b>Andika Ainur Wibowo</b></P>
-        </div>
+              <div class="menumob__sign">
+              <a href="https://www.transtv.co.id/member/register">Sign Up</a>
+              <a href="https://www.transtv.co.id/member">Sign In</a>            
+              </div>
+
+            
+          </div>
+      </div>
     </div>
+
+
+    </header>  <!--BANNER POPUP-->
+    <!--HomeContent-->
+  <section>
+        <div class="hswipe">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <div class="hswipe__wrapper">
+                        <div class="hswipe__box">
+                            <div class="hswipe__program">
+                             <a class="hswipe__programGen" href="#">Selamat Datang</a> 
+                              <a href="https://youtube.com/c/AlvianProduction" class="hswipe__programLink">
+                                <img src="images/icon/play-icon.png" alt="">
+                              </a>
+                            </div>
+                            <div class="hswipe__title">Alvian Production</div>
+                            <div class="hswipe__descrip">Multimedia & Broadcasting</div>
+                        </div>
+                        <div class="hswipe__boxImg">
+                          <div class="hswipe__boxImgBg" style="background-image: url(images/banner/head1.png);"></div>  
     
+                           <img src="images/banner/head1.png" alt="head1" title="head1">
+                        </div>
+                    </div>
+                  </div>
+					<div class="swiper-slide">
+                    <div class="hswipe__wrapper">
+                        <div class="hswipe__box">
+                            <div class="hswipe__program">
+                             <a class="hswipe__programGen" href="#">Multimedia</a> 
+                              <a href="https://youtube.com/c/AlvianProduction" class="hswipe__programLink">
+                                <img src="images/icon/play-icon.png" alt="">
+                              </a>
+                            </div>
+                            <div class="hswipe__title">Alvian Production Multimedia</div>
+                            <div class="hswipe__descrip">menyediakan tayangan entertaiment budaya, wisata dan music dengan kualitas HD</div>
+                        </div>
+                        <div class="hswipe__boxImg">
+                          <div class="hswipe__boxImgBg" style="background-image: url(images/banner/head2.png);"></div>  
+    
+                           <img src="images/banner/head2.png" alt="head2" title="head2">
+                        </div>
+                    </div>
+                  </div>
+					<div class="swiper-slide">
+                    <div class="hswipe__wrapper">
+                        <div class="hswipe__box">
+                            <div class="hswipe__program">
+                             <a class="hswipe__programGen" href="#">Live Streaming</a> 
+                              <a href="https://youtube.com/c/AlvianProduction" class="hswipe__programLink">
+                                <img src="images/icon/play-icon.png" alt="">
+                              </a>
+                            </div>
+                            <div class="hswipe__title">Alvian Production Live Stream</div>
+                            <div class="hswipe__descrip">menyediakan tayangan secara Live dan terkini dengan kualitas audio dan visual HD</div>
+                        </div>
+                        <div class="hswipe__boxImg">
+                          <div class="hswipe__boxImgBg" style="background-image: url(images/banner/head3.jpeg);"></div>  
+    
+                           <img src="images/banner/head3.jpeg" alt="head3" title="head3">
+                        </div>
+                    </div>
+                  </div>
+					           
+                </div>
+                <div class="swiper-pagination"></div>                
+            </div>
+        </div> 
+         <div class="hswipe__line">
+      <div class="hswipe__bgflash">Alvian Production</div>
+    </div>        
+  </section>
+
+  <!--MainSpot-->
+  <section>
+      <div class="mainspot">
+        <div class="mainspot__box">
+          <a href="live.html" class="mainspot__live">
+            <div class="mainspot__liveBg" style="background-image: url('images/banner/Live-streaming-tv-online-trans-tv-3.gif');"></div>
+            <img src="images/banner/Live-streaming-tv-online-trans-tv-3.gif" alt="">
+            
+          </a>
+        </div>
+        <div class="mainspot__box">
+          <div class="mainspot__sched">     
+            <div class="mainspot__schedTitle">
+              <div class="stTitle txtWhite mainspot__schedBig">Jadwal Live</div>
+              <div class="mainspot__schedMed">
+              </div>
+            </div>
+            <div id="style-3" class="mainspot__schedList">
+              <div class="mainspot__schedItem">
+                                <h4 class="mainspot__schedHours">Juli</h4><h4 class="mainspot__schedPrograms"><a href="https://youtube.com/c/AlvianProduction">Live Keboan Aliyan<p></p></a></h4></div><div class="mainspot__schedItem">
+                                <h4 class="mainspot__schedHours">Agustus</h4><h4 class="mainspot__schedPrograms"><a href="https://youtube.com/c/AlvianProduction"></a>Upacara Kemerdekaan Indonesia<p></p></h4></div><div class="mainspot__schedItem">
+                                <h4 class="mainspot__schedHours">Juli</h4><h4 class="mainspot__schedPrograms"><a href="https://youtube.com/c/AlvianProduction"><p></p></a></h4></div><div class="mainspot__schedItem"></div>
+                                </div>            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="bgBlue sectContainer">
+
+  </section>
+
+<section class="bgBlue sectBanner">
+      <div class="hbannerBott">
+        <a href="contact us" target="_blank">
+							<img width="100%" class="hbannerDesk" src="images/banner/promosi.png"/>
+									</a>       
+                
+      </div>
+
+
+  </section>
+
+   <section class="bgBlue sectContainer">
+    <div class="hchof">      
+      <a href="#" class="hchof__list">
+        <div class="hchof__wrap">
+          <div class="hchof__circle" style="background-image: url('images/banner/1.png');"></div>
+        </div>
+        <div class="hchof__box hchof__box--yellow">
+          <div class="hchof__boximg" style="background-image: url('images/banner/1.png');"></div>
+          <div class="hchof__txt"> 
+            <br>
+            Live Streaming
+          </div>
+        </div>
+      </a>
+      <a href="index.html" class="hchof__list">
+        <div class="hchof__wrap">
+          <div class="hchof__circle" style="background-image: url('images/banner/2.png');"></div>
+        </div>
+        <div class="hchof__box hchof__box--green">
+          <div class="hchof__boximg" style="background-image: url('images/banner/2.png');"></div>
+          <div class="hchof__txt">
+            <br>
+            Multimedia & Videography
+          </div>
+        </div>
+      </a>
+      <a href="#" class="hchof__list">
+        <div class="hchof__wrap">
+          <div class="hchof__circle" style="background-image: url('images/banner/3.png');"></div>
+        </div>
+        <div class="hchof__box hchof__box--blueY">
+          <div class="hchof__boximg" style="background-image: url('images/banner/3.png');"></div>
+          <div class="hchof__txt">
+            <br>
+            TV Program
+          </div>
+        </div>
+      </a>
+      <a href="#" class="hchof__list">
+        <div class="hchof__wrap">
+          <div class="hchof__circle" style="background-image: url('images/banner/4.png');"></div>
+        </div>
+        <div class="hchof__box hchof__box--blueO">
+          <div class="hchof__boximg" style="background-image: url('images/banner/4.png');"></div>
+          <div class="hchof__txt">
+            <br>
+            Social Media
+          </div>
+        </div>
+      </a>
+    
+      
+    </div>
+  </section>
+  <!--MainVideo-->
+  <!-- <section class="bgDark sectVideo">
+      <div class="mainvideo">
+        
+      <div class="mainvideo__box">
+				          <video class="mainvideo__contentMobile" src="https://www.transtv.co.id/videodata/file_3a0ec2c1aecc004d723d8c28b6c646e6/Desktop_Header_BROWNIS_Trans_TV.mp4" autoplay="" loop="" playsinline="" muted=""></video>
+				          <video class="mainvideo__contentDesktop" src="https://www.transtv.co.id/videodata/file_3a0ec2c1aecc004d723d8c28b6c646e6/Desktop_Header_BROWNIS_Trans_TV.mp4" autoplay="" loop="" playsinline="" muted=""></video>
+				          <div class="mainvideo__txt">
+				            <div class="mainvideo__icon">
+				            <a href="https://youtu.be/7Hr7sxQ6vUg">
+				              <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt="">
+				            </a>
+				            </div>
+				            <div class="mainvideo__title">
+				            <a href="https://youtu.be/7Hr7sxQ6vUg">
+				              <h2>Rame Ngobrolnya, Update Gosipnya</h2>
+				              <h4>Brownis</h4>
+				            </a>
+				            </div>
+				          </div>
+				        </div><div class="mainvideo__box mainvideo__mobile">
+						          <video class="mainvideo__content" src="https://www.transtv.co.id/videodata/file_3789b527f45d66e476a3a4d82a20d60a/Mobile_Header_BROWNIS_Trans_TV.mp4" autoplay="" loop="" playsinline="" muted=""></video>
+						          <div class="mainvideo__txt">
+						            <div class="mainvideo__icon">
+						              <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt="">
+						            </div>
+						            <div class="mainvideo__title">
+						              <h2>Update Gosipnya, Rame Ngobrolnya</h2>
+						              <h4>Brownis</h4>
+						            </div>
+						          </div>
+						        </div>
+      </div>
+  </section> -->
+  
+  <!--RecentVideo-->
+
+            <script>
+            $(document).ready(function(){
+
+                $('.hmorex').click(function(){
+                    var row = Number($('#row').val());
+                    var allcount = Number($('#all').val());
+                    row = row + 3;
+
+                    if(row <= allcount){
+                        $("#row").val(row);
+
+                        $.ajax({
+                            url: 'https://www.transtv.co.id/homettv/a263b77d700565bad6934ed1c124c4da3',
+                            type: 'post',
+                            data: {row:row},
+                            beforeSend:function(){
+                                 $('.hmorex').css("background","#343434");
+                                 $(".hmorex").html("<div class='loader'></div>");
+
+                            },
+                            success: function(response){
+
+                                setTimeout(function() {
+                                   
+                                    $(".post:last").after(response).show().fadeIn("slow");
+
+                                    var rowno = row + 3;
+
+                                    if(rowno > allcount){
+
+                                        $('.hmorex').css("background","#f5b500");
+                                        $('.hmorex').replaceWith('<a class="hmorex" href="https://www.transtv.co.id/video">MORE</a>')
+
+                                    }else{
+                                        $(".hmorex").text("MORE");
+                                        $('.hmorex').css("background","#f5b500");
+                                    }
+                                }, 2000);
+
+
+                            }
+                        });
+                    }else{
+                        
+                        $(".hmorex").html("<div class='loader'></div>");
+
+                       
+                        setTimeout(function() {
+
+                            
+                            $('.post:nth-child(3)').nextAll('.post').remove().fadeIn("slow");
+                            
+                            $("#row").val(0);
+                           
+                            $('.hmorex').text("MORE");
+                            $('.hmorex').css("background","#f5b500");
+
+                        }, 2000);
+
+
+                    }
+
+                });
+
+            });
+
+            </script>
+
+            <style>
+                .hmorex{
+                     width: 125px;
+                    display: block;
+                    text-align: center;
+                    background: #f5b500;
+                    padding: 10px;
+                    margin: 0 auto;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #000;
+                    font-family: "Barlow";
+                }
+
+                .hmorex:hover{
+                    cursor: pointer;
+                }
+                
+                .loader {
+                border: 21px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 21px solid #000000;
+                 width:35px;
+                 height: 35px;  
+                -webkit-animation: spin 2s linear infinite; /* Safari */
+                animation: spin 2s linear infinite;
+                 margin-left: auto;
+                  margin-right: auto;
+                }
+
+                /* Safari */
+                @-webkit-keyframes spin {
+                  0% { -webkit-transform: rotate(0deg); }
+                  100% { -webkit-transform: rotate(360deg); }
+                }
+
+                @keyframes spin {
+                  0% { transform: rotate(0deg); }
+                  100% { transform: rotate(360deg); }
+                }
+            </style>
+
+   <section class="bgDark sectBanner"> 
+    <div class="hbannerTop">
+        <a href="https://www.transtv.co.id/schedule" target="_blank">
+							<img width="100%" class="hbannerDesk" src="https://www.transtv.co.id/fe535a250a1246e83f240ac8a3c9e050/banner_ads/03_Desktop_BEL-BANNER-SCHEDULE.jpg"/>
+									</a>       
+              </div>
+    </section>
+
+    <section  class="bgDark sectContainer">  
+      <div class="boxContent sectBI">
+
+       <div class="boxContent__box post" id="post_15411">
+			          <a href="https://www.transtv.co.id/program/episode/15411/duuhhh----raffi-baik-banget-sih-ke-desy-ratnasari" class="boxContent__link">
+			            <div class="boxContent__img"><img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_917079a87991f11602fabf30986079dd/trans-tv-ketawa-itu-berkah-desy-ratnasari.jpg" alt="Ketawa Itu Berkah" title="Duuhhh..., Raffi Baik Banget sih, ke Desy Ratnasari">
+			            </div>
+			            <div class="boxContent__sidebox">
+			              <div class="boxContent__icon"><a href="https://www.transtv.co.id/program/episode/15411/duuhhh----raffi-baik-banget-sih-ke-desy-ratnasari" > <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></a></div>
+			              <div class="boxContent__programs">Ketawa Itu Berkah</div>
+			              <div class="boxContent__title">Duuhhh..., Raffi Baik Banget sih, ke Desy Ratnasari</div>
+			            </div>
+			          </a>
+			        </div><div class="boxContent__box post" id="post_15410">
+			          <a href="https://www.transtv.co.id/program/episode/15410/dream-box-indonesia---episode-377" class="boxContent__link">
+			            <div class="boxContent__img"><img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_b1fe9f897882382a3f0951220b68cf21/trans-tv-dream-box-indonesia-377.jpg" alt="Dream Box Indonesia" title="Dream Box Indonesia - Episode 377">
+			            </div>
+			            <div class="boxContent__sidebox">
+			              <div class="boxContent__icon"><a href="https://www.transtv.co.id/program/episode/15410/dream-box-indonesia---episode-377" > <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></a></div>
+			              <div class="boxContent__programs">Dream Box Indonesia</div>
+			              <div class="boxContent__title">Dream Box Indonesia - Episode 377</div>
+			            </div>
+			          </a>
+			        </div><div class="boxContent__box post" id="post_15414">
+			          <a href="https://www.transtv.co.id/program/episode/15414/dinar-candy-dapat-hadiah-istimewa-dari-dj-son-leo-pertanda-apa" class="boxContent__link">
+			            <div class="boxContent__img"><img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_39eabf2dcd87880593a0dd201ace981d/trans-tv-rumpi-adik-dinar-candy-son-leo.jpg" alt="Rumpi (No Secret)" title="Dinar Candy Dapat Hadiah Istimewa dari DJ Son Leo, Pertanda Apa?">
+			            </div>
+			            <div class="boxContent__sidebox">
+			              <div class="boxContent__icon"><a href="https://www.transtv.co.id/program/episode/15414/dinar-candy-dapat-hadiah-istimewa-dari-dj-son-leo-pertanda-apa" > <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></a></div>
+			              <div class="boxContent__programs">Rumpi (No Secret)</div>
+			              <div class="boxContent__title">Dinar Candy Dapat Hadiah Istimewa dari DJ Son Leo, Pertanda Apa?</div>
+			            </div>
+			          </a>
+			        </div><div class="boxContent__box post" id="post_15413">
+			          <a href="https://www.transtv.co.id/program/episode/15413/vicky-prasetyo-dapat-julukan-tukang-kawin-benar-enggak" class="boxContent__link">
+			            <div class="boxContent__img"><img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_f42f1e5d5794d7fdb1a0cb85ef12f167/trans-tv-brownis-vicky-prasetyo-tukang-kawin.jpg" alt="Brownis" title="Vicky Prasetyo Dapat Julukan 'Tukang Kawin', Benar Enggak?">
+			            </div>
+			            <div class="boxContent__sidebox">
+			              <div class="boxContent__icon"><a href="https://www.transtv.co.id/program/episode/15413/vicky-prasetyo-dapat-julukan-tukang-kawin-benar-enggak" > <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></a></div>
+			              <div class="boxContent__programs">Brownis</div>
+			              <div class="boxContent__title">Vicky Prasetyo Dapat Julukan 'Tukang Kawin', Benar Enggak?</div>
+			            </div>
+			          </a>
+			        </div><div class="boxContent__box post" id="post_15412">
+			          <a href="https://www.transtv.co.id/program/episode/15412/pernah-alami-gangguan-pita-suara-judika-ambil-keputusan-ini" class="boxContent__link">
+			            <div class="boxContent__img"><img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_04018f54602e9c3961b5d6f5942687dc/trans-tv-pagi-pagi-ambyar-judika-rusak-pita-suara.jpg" alt="Pagi-Pagi Ambyar" title="Pernah Alami Gangguan Pita Suara, Judika Ambil Keputusan ini">
+			            </div>
+			            <div class="boxContent__sidebox">
+			              <div class="boxContent__icon"><a href="https://www.transtv.co.id/program/episode/15412/pernah-alami-gangguan-pita-suara-judika-ambil-keputusan-ini" > <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></a></div>
+			              <div class="boxContent__programs">Pagi-Pagi Ambyar</div>
+			              <div class="boxContent__title">Pernah Alami Gangguan Pita Suara, Judika Ambil Keputusan ini</div>
+			            </div>
+			          </a>
+			        </div><div class="boxContent__box post" id="post_5455">
+			          <a href="https://www.transtv.co.id/program/episode/5455/arsenal" class="boxContent__link">
+			            <div class="boxContent__img"><img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_bcf1734342e259e3809ac2d9875f4f9e/bioskop-trans-tv-arsenal-WP.jpg" alt="Bioskop TRANS TV" title="Arsenal">
+			            </div>
+			            <div class="boxContent__sidebox">
+			              <div class="boxContent__icon"><a href="https://www.transtv.co.id/program/episode/5455/arsenal" > <img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></a></div>
+			              <div class="boxContent__programs">Bioskop TRANS TV</div>
+			              <div class="boxContent__title">Arsenal</div>
+			            </div>
+			          </a>
+			        </div>
+      </div>
+      
+      <div class="hmorex">
+        MORE
+      </div>
+      <input type="hidden" id="row" value="3">
+      <input type="hidden" id="all" value="12">
+
+
+      
+  </section>
+
+  <!--INSERT Live-->
+  <section class="bgPurple sectContainer">
+      <div class="hinsert">
+        <a href="https://www.transtv.co.id/insertlive" class="stTitle txtWhite">INSERTLIVE</a>
+        <div class="hinsert__box">
+
+          <div class="hinsert__boxItem">
+		            <a href="https://www.transtv.co.id/insertlive" target="_blank" class="hinsert__link">
+		              <div class="hinsert__thumbnail" style="background-image:url('https://akcdn.detik.net.id/community/media/visual/2023/06/27/fanni-lauren_169.jpeg?w=640&q=90')">
+		                <img src="https://akcdn.detik.net.id/community/media/visual/2023/06/27/fanni-lauren_169.jpeg?w=640&q=90" alt="Tanggapan Fanni Lauren Eks Puteri Indonesia Soal Tudingan Penipuan">
+		              </div>
+		              <div class="hinsert__title">
+		                 Tanggapan Fanni Lauren Eks Puteri Indonesia Soal Tudingan Penipuan
+		              </div>
+		            </a>
+		          </div><div class="hinsert__boxItem">
+		            <a href="https://www.transtv.co.id/insertlive" target="_blank" class="hinsert__link">
+		              <div class="hinsert__thumbnail" style="background-image:url('https://akcdn.detik.net.id/community/media/visual/2023/06/27/tasyi-athasya_169.png?w=640&q=90')">
+		                <img src="https://akcdn.detik.net.id/community/media/visual/2023/06/27/tasyi-athasya_169.png?w=640&q=90" alt="Bantahan Tasyi Athasyia soal Beri Makanan Sisa hingga Basi untuk Eks Karyawan">
+		              </div>
+		              <div class="hinsert__title">
+		                 Bantahan Tasyi Athasyia soal Beri Makanan Sisa hingga Basi untuk Eks Karyawan
+		              </div>
+		            </a>
+		          </div><div class="hinsert__boxItem">
+		            <a href="https://www.transtv.co.id/insertlive" target="_blank" class="hinsert__link">
+		              <div class="hinsert__thumbnail" style="background-image:url('https://akcdn.detik.net.id/community/media/visual/2018/09/14/7a231675-66ce-4cfa-946f-5d5f8c58afa2_169.png?w=640&q=90')">
+		                <img src="https://akcdn.detik.net.id/community/media/visual/2018/09/14/7a231675-66ce-4cfa-946f-5d5f8c58afa2_169.png?w=640&q=90" alt="Anak Bakal Sekolah di Luar Negeri, Dewi Perssik: Anakku Sudah Besar">
+		              </div>
+		              <div class="hinsert__title">
+		                 Anak Bakal Sekolah di Luar Negeri, Dewi Perssik: Anakku Sudah Besar
+		              </div>
+		            </a>
+		          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="bgLight sectContainer">
+    <div class="hinsert">
+      <a href="https://www.transtv.co.id/berita-pemilu-2024" class="stTitle txtBlack">KABAR PEMILU 2024</span></a>
+      <div class="hinsert__box hinsert__boxPemilu">
+
+        <div class="hinsert__boxItem">
+		            <a href="https://www.transtv.co.id/berita-pemilu-2024" target="_blank" class="hinsert__linkPemilu">
+		             <div class="hinsert__thumbnail">
+		                <img src="https://akcdn.detik.net.id/visual/2023/06/27/calon-presiden-ganjar-pranowo-dan-anies-baswedan-di-sela-ibadah-haji_169.jpeg?w=640&q=90" alt="PPP Sebut Ganjar-Anies Tak Bahas Politik saat Jumpa di Makkah" >
+		              </div>
+		              <div class="hinsert__title hinsert__titlePemilu txtBlack">
+		                 PPP Sebut Ganjar-Anies Tak Bahas Politik saat Jumpa di Makkah
+		              </div>
+		            </a>
+		          </div><div class="hinsert__boxItem">
+		            <a href="https://www.transtv.co.id/berita-pemilu-2024" target="_blank" class="hinsert__linkPemilu">
+		             <div class="hinsert__thumbnail">
+		                <img src="https://akcdn.detik.net.id/visual/2019/07/27/82319314-a00c-45cf-88fb-97dd76739a32_169.jpeg?w=640&q=90" alt="Masinton PDIP Sentil SBY: Kalau Tak Bisa Terbang Jangan Salahin Udara" >
+		              </div>
+		              <div class="hinsert__title hinsert__titlePemilu txtBlack">
+		                 Masinton PDIP Sentil SBY: Kalau Tak Bisa Terbang Jangan Salahin Udara
+		              </div>
+		            </a>
+		          </div><div class="hinsert__boxItem">
+		            <a href="https://www.transtv.co.id/berita-pemilu-2024" target="_blank" class="hinsert__linkPemilu">
+		             <div class="hinsert__thumbnail">
+		                <img src="https://akcdn.detik.net.id/visual/2020/08/12/rumah-kenangan_169.jpeg?w=640&q=90" alt="Butet Tegaskan Pantun Si Pandir Bukan Titipan PDIP: Itu Kejujuran Saya" >
+		              </div>
+		              <div class="hinsert__title hinsert__titlePemilu txtBlack">
+		                 Butet Tegaskan Pantun Si Pandir Bukan Titipan PDIP: Itu Kejujuran Saya
+		              </div>
+		            </a>
+		          </div><div class="hinsert__boxItem">
+		            <a href="https://www.transtv.co.id/berita-pemilu-2024" target="_blank" class="hinsert__linkPemilu">
+		             <div class="hinsert__thumbnail">
+		                <img src="https://akcdn.detik.net.id/visual/2018/02/13/d364e62e-497c-439b-a098-a8fd1c48bfc5_169.jpeg?w=640&q=90" alt="Butet Buka Suara soal Monolog Si Pandir dan Tukang Culik: Itu Fakta Kok" >
+		              </div>
+		              <div class="hinsert__title hinsert__titlePemilu txtBlack">
+		                 Butet Buka Suara soal Monolog Si Pandir dan Tukang Culik: Itu Fakta Kok
+		              </div>
+		            </a>
+		          </div>
+      </div>
+    </div>
+</section>
+
+ <section class="sectBanner"> 
+ <div class="hbannerTop">
+       <a href="https://www.transtv.co.id/video" target="_blank">
+							<img width="100%" class="hbannerDesk" src="https://www.transtv.co.id/fe535a250a1246e83f240ac8a3c9e050/banner_ads/BeltBanner_VIDEO-Channel_DESKTOP.jpg"/>
+									</a>       
+              </div>
+
+
+</section>
+  <!--Favorite Video-->
+  <section class="sectContainer">
+
+      <div class="hfavo sectBI">
+        
+      <a href="https://www.transtv.co.id/program/140/favorite-drama" class=""><h4 class="stTitle txtBlueOld">FAVORITE DRAMA</h4></a>
+        <div class="boxContent boxContentMob"> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/6115/kisah-idul-fitri-episode-18" class="boxContent__link"><div class="boxContent__img" >
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_cb25582ddb2c0d78fb2d2a2f00ab474b/trans-tv-idul-dan-fitri-18.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite Drama</div>
+                <div class="boxContent__title">Kisah Idul & Fitri: Episode 18</div>
+              </div>
+            </a>
+          </div> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/4969/nilai-kehidupan-senja-di-panti-jompo" class="boxContent__link"><div class="boxContent__img" >
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_8e2632b17d6f1b4b6707e682f343d120/trans-tv-nilai-kehidupan-panti-jompo.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite Drama</div>
+                <div class="boxContent__title">NILAI KEHIDUPAN: Senja di Panti Jompo</div>
+              </div>
+            </a>
+          </div> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/6333/rezeki-7-turunan-episode-13" class="boxContent__link"><div class="boxContent__img" >
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_59b95459b89d609693a1f703724edf6b/trans-tv-rezeki-7-turunan-13.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite Drama</div>
+                <div class="boxContent__title">Rezeki 7 Turunan: Episode 13</div>
+              </div>
+            </a>
+          </div></div>       <div class="GABanner">
+    
+    </div>
+      </div>
+
+     
+
+      <div class="hfavo sectBI">
+        
+        <a href="https://www.transtv.co.id/program/132/favorite-tv-program" class=""><h4 class="stTitle txtBlueOld">FAVORITE TV PROGRAM</h4></a>
+        <div class="boxContent boxContentMob"> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/10958/jelang-siang-wisata-air-terjun-curug-cigamea" class="boxContent__link"><div class="boxContent__img">
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_79bf1a89a5cf6590de51945fb20114cc/trans-tv-jelang-siang-curug-cigamea.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite TV Program</div>
+                <div class="boxContent__title">JELANG SIANG: Wisata Air Terjun Curug Cigamea</div>
+              </div>
+            </a>
+          </div> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/10473/improvisasi-seleb-chocky-sitohang-diuji-sama-pacar" class="boxContent__link"><div class="boxContent__img">
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_21ad274e3364f79228e39ba884402b89/trans-tv-improvisasi-seleb-choky-sitohang.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite TV Program</div>
+                <div class="boxContent__title">IMPROVISASI SELEB: Chocky Sitohang Diuji Sama Pacar</div>
+              </div>
+            </a>
+          </div> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/1800/mission-x-agen-baru-dari-puteri-perdamaian-internasional" class="boxContent__link"><div class="boxContent__img">
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_39e176e6edd883f8eb90b1d9a80462f4/trans-tv-mission-x-miss-perdamaian.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite TV Program</div>
+                <div class="boxContent__title">MISSION X: Agen Baru dari Puteri Perdamaian Internasional</div>
+              </div>
+            </a>
+          </div></div>      </div>
+
+      <div class="hfavo sectBI">
+        
+        <a href="https://www.transtv.co.id/program/150/favorite-reality-drama" class=""><h4 class="stTitle txtBlueOld">FAVORITE REALITY DRAMA</h4></a>
+        <div class="boxContent boxContentMob"> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/9765/harta-tahta-wanita-cinta-lama-berujung-maut" class="boxContent__link"><div class="boxContent__img" ><div class="boxContent__adlt">18+</div>
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_03e9079c3fd6b95e988e094c8884fc4b/trans-tv-harta-tahta-wanita-cinta-lama-petaka.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite Reality Drama</div>
+                <div class="boxContent__title">HARTA TAHTA WANITA: Cinta Lama Berujung Maut</div>
+              </div>
+            </a>
+          </div> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/9250/kriminal-siksa-kubur-sang-psk" class="boxContent__link"><div class="boxContent__img" ><div class="boxContent__adlt">18+</div>
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_51f7a094c96a7c29762d10d6516e0851/trans-tv-kriminal-siksa-kubur-PSK.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite Reality Drama</div>
+                <div class="boxContent__title">KRIMINAL: Siksa Kubur Sang PSK</div>
+              </div>
+            </a>
+          </div> <div class="boxContent__box boxContentMob__box">
+            <a href="https://www.transtv.co.id/program/episode/8431/harta-tahta-wanita-prahara-bulu-dada" class="boxContent__link"><div class="boxContent__img" ><div class="boxContent__adlt">18+</div>
+                <img src="https://www.transtv.co.id/b80f837c8e0e19dee436622f4ff6936f/program_episodik_b67e55825d757e959562504810c35c8f/trans-tv-harta-tahta-wanita-bulu-dada.jpg" alt="">
+              </div>
+              <div class="boxContent__sidebox">
+                <div class="boxContent__icon"><img src="https://www.transtv.co.id/layout/new/src/images/icon/play-icon.png" alt=""></div>
+                <div class="boxContent__programs">Favorite Reality Drama</div>
+                <div class="boxContent__title">HARTA TAHTA WANITA: Prahara Bulu Dada</div>
+              </div>
+            </a>
+          </div></div>      </div>
+
+      
+  </section>
+
+  <!-- footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer__side">
+          <div class="footer__logo">
+            <a href=""><img src="images/logowhite.png" alt=""></a>
+          </div>
+          <div class="footer__company">PT TELEVISI TRANSFORMASI INDONESIA</div>
+          <div class="footer__address">
+            <p>Gedung TRANSMEDIA</p>
+            <p>Jl. Kapten P. Tendean Kav 12-14 A</p>
+            <p>Mampang Prapatan, Jakarta Selatan 12790</p>
+          </div>
+        </div>
+        <div class="footer__side">
+          <div class="footer__fllw">FOLLOW US</div>
+          <div class="footer__sosmed">
+            <a href="https://www.facebook.com/TransTVMedia/" target="_blank"><img src="https://www.transtv.co.id/layout/new/src/images/icon/fb.png" alt=""></a>
+            <a href="https://www.instagram.com/transtv_corp/" target="_blank"><img src="https://www.transtv.co.id/layout/new/src/images/icon/ig.png" alt=""></a>
+            <a href="https://twitter.com/transtv_corp" target="_blank"><img src="https://www.transtv.co.id/layout/new/src/images/icon/tw.png" alt=""></a>
+            <a href="https://www.youtube.com/user/TRANSTVofficial" target="_blank"><img src="https://www.transtv.co.id/layout/new/src/images/icon/yt.png" alt=""></a>
+            <a href="https://www.tiktok.com/@transtvofficial" target="_blank"><img src="https://www.transtv.co.id/layout/new/src/images/icon/tk.png" alt=""></a>
+          </div>
+          <script async src="https://infomovie.web.id" crossorigin="www.transtv.co.id"></script>
+          <div class="footer__menu">
+            <a href="https://www.transtv.co.id/corporate/profile">PROFILE</a>
+            <a href="https://www.transtv.co.id/corporate/kerjasama-multipleksing">KERJASAMA MULTIPLEKSING</a>
+            <a href="https://www.transtv.co.id/karir-trans-tv">JOBS & CAREER</a>
+            <a href="https://www.transtv.co.id/corporate">CORPORATE</a>
+            <a href="https://www.transtv.co.id/corporate/community">ACTIVITIES</a>
+            <a href="https://www.transtv.co.id/contact">CONTACT US</a>
+          </div>
+        </div>
+  
+      </div>
+  </footer>    <!-- footer -->
+  
+  <script type="text/javascript" src="https://www.transtv.co.id/layout/new/src/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.transtv.co.id/layout/new/src/vendor/scriptjs-1.1.js"></script>
+  <script type="text/javascript" src="https://www.transtv.co.id/layout/new/src/js/main.js"></script>
+  <script type="text/javascript" src="https://www.transtv.co.id/layout/new/src/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <script>
+        var swiper = new Swiper(".mySwiper", {
+          autoplay: {
+            delay: 4000,
+          },
+          loop: true,
+          grabCursor: true,
+          pagination: {
+            el: ".swiper-pagination",            
+                clickable: true,
+          },
+        });
+        
+        var swiper = new Swiper(".swiper2", {
+          slidesPerView: 1,
+          pagination: {
+            el: ".swiper-pagination1",
+            clickable: true,
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: "auto",
+              spaceBetween: 5,
+            },
+            800: {
+              slidesPerView: 1,
+              spaceBetween: 5,
+            },
+          },
+        });
+
+  </script>
+
 </body>
 </html>
