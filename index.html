@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alvian Nur Firdaus | Portfolio</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Alvian Nur Firdaus | Portfolio">
+    <meta name="description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <meta name="author" content="Alvian Nur Firdaus">
+
+    <!-- Favicon (Ikon kecil di tab browser) -->
+    <link rel="icon" type="image/png" href="alvian.png">
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
+    <meta property="og:title" content="Alvian Nur Firdaus | Portfolio">
+    <meta property="og:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <!-- PENTING: URL gambar untuk OG harus absolut (pakai https://), tidak bisa lokal seperti 'alvian.png' -->
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=Alvian+Nur+Firdaus&background=0D8ABC&color=fff&size=512">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
+    <meta property="twitter:title" content="Alvian Nur Firdaus | Portfolio">
+    <meta property="twitter:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <meta property="twitter:image" content="https://ui-avatars.com/api/?name=Alvian+Nur+Firdaus&background=0D8ABC&color=fff&size=512">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -101,7 +125,7 @@
             object-fit: cover;
             box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
             border: 5px solid rgba(255,255,255,0.1);
-            background-color: #1e293b; /* Fallback if image not found */
+            background-color: #1e293b; 
         }
 
         .hero-text h1 {
@@ -150,16 +174,17 @@
             box-shadow: 0 0 15px var(--accent-2);
         }
 
-        /* Grid Layouts */
+        /* Grid Layouts - DIPERBAIKI UNTUK MOBILE */
         .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            /* Menggunakan min() mencegah elemen jebol di layar kecil */
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
             gap: 25px;
         }
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
             gap: 25px;
         }
 
@@ -289,18 +314,65 @@
             padding-top: 15px;
             font-size: 0.85rem;
             color: var(--text-muted);
+            gap: 10px;
         }
 
+        /* MEDIA QUERIES UNTUK TAMPILAN MOBILE & TABLET */
         @media (max-width: 768px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
             .hero {
                 flex-direction: column;
                 text-align: center;
+                gap: 20px;
             }
+            
+            .hero-img {
+                width: 150px;
+                height: 150px;
+            }
+            
             .hero-text h1 {
                 font-size: 2.2rem;
             }
+
+            .hero-text h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+            
             .social-links {
                 justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .glass-card {
+                padding: 20px;
+            }
+
+            .post-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Ekstra kecil untuk HP lipat / jadul */
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .skill-badge {
+                font-size: 0.85rem;
+                padding: 6px 14px;
             }
         }
     </style>
@@ -365,7 +437,7 @@
                 <div>
                     <div class="timeline-item">
                         <div class="timeline-date">Nov 2025 - Present</div>
-                        <div class="timeline-title">IoT Engineer</div>
+                        <div class="timeline-title">IoT Specialist</div>
                         <div class="timeline-subtitle">Aptavis · Bandung</div>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">Melakukan riset teknologi IoT terbaru, mengembangkan prototype perangkat mulai dari firmware hingga koneksi cloud, dan menguji performa sensor.</p>
                     </div>
