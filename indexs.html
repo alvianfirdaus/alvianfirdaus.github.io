@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvian Nur Firdaus | Portfolio</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Alvian Nur Firdaus | Portfolio">
+    <meta name="description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <meta name="author" content="Alvian Nur Firdaus">
+
+    <!-- Favicon (Ikon kecil di tab browser) -->
+    <link rel="icon" type="image/png" href="alvian.png">
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
+    <meta property="og:title" content="Alvian Nur Firdaus | Portfolio">
+    <meta property="og:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <!-- PENTING: URL gambar untuk OG harus absolut (pakai https://), tidak bisa lokal seperti 'alvian.png' -->
+    <meta property="og:image" content="https://github.com/alvianfirdaus/alvianfirdaus.github.io/blob/main/alvian.png?raw=true">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
+    <meta property="twitter:title" content="Alvian Nur Firdaus | Portfolio">
+    <meta property="twitter:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <meta property="twitter:image" content="https://github.com/alvianfirdaus/alvianfirdaus.github.io/blob/main/alvian.png?raw=true">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-1: #00f2fe;
+            --accent-2: #4facfe;
+            --accent-3: #f093fb;
+            --accent-4: #f5576c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Background Effects */
+        .blob {
+            position: fixed;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+        .blob-1 { top: -100px; left: -100px; width: 400px; height: 400px; background: #4facfe; }
+        .blob-2 { bottom: -100px; right: -100px; width: 300px; height: 300px; background: #f093fb; }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(50px) scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
+            border: 5px solid rgba(255,255,255,0.1);
+            background-color: #1e293b; 
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 1.5rem;
+            color: var(--accent-1);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 1px solid var(--card-border);
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--accent-2);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px var(--accent-2);
+        }
+
+        /* Grid Layouts - DIPERBAIKI UNTUK MOBILE */
+        .grid-2 {
+            display: grid;
+            /* Menggunakan min() mencegah elemen jebol di layar kecil */
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+            gap: 25px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: 25px;
+        }
+
+        /* Timeline / Experience & Education */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+            border-left: 2px solid var(--accent-3);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-3);
+            box-shadow: 0 0 10px var(--accent-3);
+        }
+
+        .timeline-date {
+            color: var(--accent-1);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .timeline-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Dynamic Post Cards */
+        .post-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .post-image-wrapper {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background-color: #1e293b;
+        }
+
+        .post-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .post-card:hover .post-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .post-tag {
+            color: var(--accent-4);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .post-title {
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            color: white;
+        }
+
+        .post-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--card-border);
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            gap: 10px;
+        }
+
+        /* MEDIA QUERIES UNTUK TAMPILAN MOBILE & TABLET */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .hero-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .glass-card {
+                padding: 20px;
+            }
+
+            .post-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Ekstra kecil untuk HP lipat / jadul */
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .skill-badge {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container">
+        
+        <header class="hero">
+            <img src="alvian.png" alt="Alvian Nur Firdaus" class="hero-img" onerror="this.src='https://ui-avatars.com/api/?name=Alvian+Nur+Firdaus&background=0D8ABC&color=fff&size=180'">
+            <div class="hero-text">
+                <h1>Alvian Nur Firdaus</h1>
+                <h2>Software Engineer | IoT Engineer | Beswan Djarum '39</h2>
+                <p>📍 Banyuwangi, Jawa Timur, Indonesia<br>
+                   Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat melalui integrasi Web Development, Mobile App, dan Internet of Things (IoT).</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/alvian-nur-firdaus" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:alviannurfirdaus1@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:081235026920" class="social-btn"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid-2">
+            <div class="glass-card">
+                <h2 class="section-title">Ringkasan</h2>
+                <p style="color: var(--text-muted); text-align: justify;">
+                    Sebagai seorang <strong>Software Engineer</strong>, saya memiliki pengalaman dalam mengembangkan aplikasi web, mobile, serta sistem berbasis <strong>Internet of Things (IoT)</strong>. Saya telah merancang dan mengembangkan lebih dari tiga sistem yang bertujuan meningkatkan efisiensi kerja dan mendukung proses digitalisasi dalam organisasi.
+                    <br><br>
+                    Saya memiliki kemampuan kepemimpinan, manajemen waktu, dan komunikasi yang efektif. Saat ini saya mencari peluang di perusahaan teknologi atau startup untuk tumbuh bersama dan mengembangkan keterampilan saya di bidang IT.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h2 class="section-title">Keahlian & Sertifikasi</h2>
+                <div class="skills-wrapper">
+                    <span class="skill-badge"><i class="fas fa-code"></i> Web Development</span>
+                    <span class="skill-badge"><i class="fab fa-android"></i> Android Development</span>
+                    <span class="skill-badge"><i class="fas fa-microchip"></i> Internet of Things (IoT)</span>
+                    <span class="skill-badge"><i class="fab fa-laravel"></i> Laravel</span>
+                    <span class="skill-badge"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                    <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+                    <span class="skill-badge"><i class="fas fa-microchip"></i> Arduino IDE</span>
+                    <span class="skill-badge"><i class="fab fa-aws"></i> AWS Cloud</span>
+                </div>
+                <br>
+                <h3 style="color: white; font-size: 1.1rem; margin-bottom: 10px;">Sertifikasi Utama:</h3>
+                <ul style="color: var(--text-muted); font-size: 0.95rem; padding-left: 20px;">
+                    <li>AWS Cloud Practitioner Essentials</li>
+                    <li>MIKROTIK MTCNA</li>
+                    <li>Belajar Dasar AI (Dicoding)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="section-title">Pengalaman Kerja & Organisasi</h2>
+            <div class="grid-2">
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Nov 2025 - Present</div>
+                        <div class="timeline-title">IoT Specialist</div>
+                        <div class="timeline-subtitle">Aptavis · Bandung</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Melakukan riset teknologi IoT terbaru, mengembangkan prototype perangkat mulai dari firmware hingga koneksi cloud, dan menguji performa sensor.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mar 2025 - Present</div>
+                        <div class="timeline-title">Founder Ijendev.id</div>
+                        <div class="timeline-subtitle">Ijendev.id | Ijend Developer Indonesia · Banyuwangi</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Founder dari Ijendev. Berhasil menyelesaikan 9+ project mencakup pengembangan web, aplikasi mobile, dan sistem berbasis IoT.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jul 2024 - Des 2024</div>
+                        <div class="timeline-title">Full Stack Engineer</div>
+                        <div class="timeline-subtitle">PT PLN (Persero) · Sidoarjo</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Pengembangan aplikasi berbasis IoT dan Flutter untuk monitoring tangki BBM pada genset PT PLN UP2B Jatim.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Ags 2023 - Ags 2024</div>
+                        <div class="timeline-title">Awardee Scholarship</div>
+                        <div class="timeline-subtitle">Djarum Beasiswa Plus</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Okt 2021 - Feb 2023</div>
+                        <div class="timeline-title">Organizing Committee</div>
+                        <div class="timeline-subtitle">Himpunan Mahasiswa Teknologi Informasi (HMTI) Polinema · Malang</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jan 2020 - Jul 2020</div>
+                        <div class="timeline-title">Network Engineer</div>
+                        <div class="timeline-subtitle">Dinas Komunikasi dan Informatika · Banyuwangi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="grid-2">
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jul 2021 - Sep 2025</div>
+                        <div class="timeline-title">Politeknik Negeri Malang</div>
+                        <div class="timeline-subtitle">Gelar Sarjana Terapan (D4), Teknologi Informasi</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Lulus dengan IPK 3.87.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Feb 2024 - Jun 2024</div>
+                        <div class="timeline-title">Studi Independen (Kampus Merdeka)</div>
+                        <div class="timeline-subtitle">RevoU x AWS</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Mempelajari tentang Data Analytics, Cloud Computing (AWS), dan Artificial Intelligence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 20px;">Aktivitas & Inovasi </h2>
+        <div class="grid-3" id="dynamic-posts-container">
+            </div>
+
+    </div>
+
+    <script>
+        // Data Postingan LinkedIn Anda
+        const linkedinData = [
+            {
+                tag: "#JagoanDigital #Innovation",
+                title: "Jagoan Digital Banyuwangi 2025",
+                excerpt: "Sebuah program pengembangan talenta dan inovasi teknologi dari Pemkab Banyuwangi. Saya bersyukur telah terpilih sebagai Jagoan Digital Banyuwangi 2025. Penghargaan ini menjadi motivasi untuk terus berdampak.",
+                image: "https://media.licdn.com/dms/image/v2/D5622AQFkbgkfxCqxsw/feedshare-shrink_1280/B56ZpuQIekJwAs-/0/1762786320001?e=1783555200&v=beta&t=6SJlokmiyvhA-3jYjNfSlYGHmXd6ktwOjox62p_Xk0I", 
+                location: "Banyuwangi",
+                likes: "104",
+                comments: "13 comments"
+            },
+            {
+                tag: "#SmartFarming #IoT #Sitanam",
+                title: "SITANAM (Smart Precision Farming)",
+                excerpt: "Melalui SITANAM, kami berupaya menghadirkan sistem pertanian cerdas yang membantu petani mengelola lahan dengan lebih efisien, terukur, dan berkelanjutan. Terintegrasi ESP32, Firebase, dan Flutter App.",
+                image: "https://media.licdn.com/dms/image/v2/D5622AQFKvEdiRD_QXg/feedshare-shrink_800/B56ZncUvQRKIAg-/0/1760338074418?e=1783555200&v=beta&t=ZENAmYiFidVwpAJHXRQAIpH4WLq4iZ37iHBuGCokBdc", 
+                location: "Desa Aliyan, Banyuwangi",
+                likes: "100",
+                comments: "8 comments"
+            },
+            {
+                tag: "#CloudInfra #TechCommunity",
+                title: "Dicoding Developer Conference",
+                excerpt: "Dengan bangga menjadi peserta Dicoding Developer Conference, khususnya pada trek AI for Cloud Infra and DevOps. Transisi dari DevOps tradisional menuju AIOps adalah keniscayaan.",
+                image: "https://media.licdn.com/dms/image/v2/D5622AQHJQW-Zsi8xZQ/feedshare-shrink_800/B56Z3ZFuDaGsAg-/0/1777463648720?e=1783555200&v=beta&t=Z6FFcLreeuPcrvcMIgSK61sOOwtzHJpA37lm7j8A8VA", 
+                location: "Tech Event",
+                likes: "31",
+                comments: "4 comments"
+            },
+            {
+                tag: "#KeamananSiber #KMIPNV",
+                title: "Finalis Keamanan Siber KMIPN V",
+                excerpt: "Very grateful and proud to share that we have succeeded in passing a big challenge at KMIPN V at PENS Surabaya. Humbled to announce that we qualified as finalists in this competitive category.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GRx7ug2Z1NGrysinRTgqr0DaRsh4silsFA&s", 
+                location: "PENS Surabaya",
+                likes: "20",
+                comments: "Finalist"
+            }
+        ];
+
+        // Fungsi Render HTML
+        function renderPosts() {
+            const container = document.getElementById('dynamic-posts-container');
+            if (!container) return; 
+
+            let htmlContent = '';
+
+            linkedinData.forEach(post => {
+                htmlContent += `
+                    <div class="glass-card post-card">
+                        <div class="post-image-wrapper">
+                            <img src="${post.image}" alt="${post.title}">
+                        </div>
+                        <div>
+                            <span class="post-tag">${post.tag}</span>
+                            <h3 class="post-title">${post.title}</h3>
+                            <p class="post-excerpt">${post.excerpt}</p>
+                        </div>
+                        <div class="post-footer">
+                            <span><i class="fas fa-map-marker-alt"></i> ${post.location}</span>
+                            <span><i class="fas fa-heart" style="color: var(--accent-4)"></i> ${post.likes} &nbsp; <i class="fas fa-comment"></i> ${post.comments}</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
+        }
+
+        // Panggil render saat DOM selesai dimuat
+        document.addEventListener('DOMContentLoaded', renderPosts);
+    </script>
+</body>
+</html>
