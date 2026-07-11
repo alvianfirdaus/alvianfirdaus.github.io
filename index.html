@@ -3,374 +3,583 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surat Untuk Azizah</title>
+    <title>Alvian Nur Firdaus | Portfolio</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Alvian Nur Firdaus | Portfolio">
+    <meta name="description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <meta name="author" content="Alvian Nur Firdaus">
 
+    <!-- Favicon (Ikon kecil di tab browser) -->
+    <link rel="icon" type="image/png" href="alvian.png">
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
+    <meta property="og:title" content="Alvian Nur Firdaus | Portfolio">
+    <meta property="og:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <!-- PENTING: URL gambar untuk OG harus absolut (pakai https://), tidak bisa lokal seperti 'alvian.png' -->
+    <meta property="og:image" content="https://github.com/alvianfirdaus/alvianfirdaus.github.io/blob/main/alvian.png?raw=true">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
+    <meta property="twitter:title" content="Alvian Nur Firdaus | Portfolio">
+    <meta property="twitter:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
+    <meta property="twitter:image" content="https://github.com/alvianfirdaus/alvianfirdaus.github.io/blob/main/alvian.png?raw=true">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-1: #00f2fe;
+            --accent-2: #4facfe;
+            --accent-3: #f093fb;
+            --accent-4: #f5576c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: #0a0205;
-            background: radial-gradient(circle at top, #2a0812 0%, #0a0205 100%);
-            color: #fdfbf7;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
-            background-attachment: fixed;
+        }
+
+        /* Background Effects */
+        .blob {
+            position: fixed;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+        .blob-1 { top: -100px; left: -100px; width: 400px; height: 400px; background: #4facfe; }
+        .blob-2 { bottom: -100px; right: -100px; width: 300px; height: 300px; background: #f093fb; }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(50px) scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
+            border: 5px solid rgba(255,255,255,0.1);
+            background-color: #1e293b; 
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 1.5rem;
+            color: var(--accent-1);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 1px solid var(--card-border);
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--accent-2);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px var(--accent-2);
+        }
+
+        /* Grid Layouts - DIPERBAIKI UNTUK MOBILE */
+        .grid-2 {
+            display: grid;
+            /* Menggunakan min() mencegah elemen jebol di layar kecil */
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+            gap: 25px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: 25px;
+        }
+
+        /* Timeline / Experience & Education */
+        .timeline-item {
             position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+            border-left: 2px solid var(--accent-3);
         }
 
-        /* =========================================
-           1. ORNAMEN BURUNG (BACKGROUND)
-           ========================================= */
-        .bird-container {
-            position: fixed; width: 100%; pointer-events: none; z-index: 1; opacity: 0.3;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-3);
+            box-shadow: 0 0 10px var(--accent-3);
         }
-        .bird-1 { top: 15%; animation: flyAcross 20s linear infinite; left: -10%; }
-        .bird-2 { top: 30%; animation: flyAcross 35s linear infinite 5s; transform: scale(0.7); left: -15%; opacity: 0.2; }
-        .bird-3 { top: 10%; animation: flyAcross 28s linear infinite 12s; transform: scale(0.5); left: -10%; opacity: 0.4; }
-        .bird-4 { top: 40%; animation: flyAcross 40s linear infinite 2s; transform: scale(0.8); left: -20%; opacity: 0.25; }
+
+        .timeline-date {
+            color: var(--accent-1);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .timeline-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Dynamic Post Cards */
+        .post-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .post-image-wrapper {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background-color: #1e293b;
+        }
+
+        .post-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .post-card:hover .post-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .post-tag {
+            color: var(--accent-4);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .post-title {
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            color: white;
+        }
+
+        .post-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--card-border);
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            gap: 10px;
+        }
+
+        /* MEDIA QUERIES UNTUK TAMPILAN MOBILE & TABLET */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .hero-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .glass-card {
+                padding: 20px;
+            }
+
+            .post-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
         
-        @keyframes flyAcross {
-            0% { transform: translateX(-10vw) translateY(0) scale(var(--scale, 1)); }
-            50% { transform: translateX(50vw) translateY(-30px) scale(var(--scale, 1)); }
-            100% { transform: translateX(110vw) translateY(10px) scale(var(--scale, 1)); }
-        }
-
-        /* =========================================
-           2. ORNAMEN DAUN BERGOYANG (FOREGROUND LAYER 3D)
-           ========================================= */
-        .ornament-corner {
-            position: fixed; width: 140px; height: auto; pointer-events: none;
-            z-index: 50; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.9)); opacity: 0.85;
-        }
-        /* Sudut Bawah */
-        .ornament-bottom-left { bottom: -30px; left: -30px; transform-origin: bottom left; animation: swayLeft 6s ease-in-out infinite alternate; }
-        .ornament-bottom-right { bottom: -30px; right: -30px; transform-origin: bottom right; animation: swayRight 7s ease-in-out infinite alternate; }
-        /* Sudut Atas (Gantung) */
-        .ornament-top-left { top: -30px; left: -30px; transform-origin: top left; transform: rotate(180deg); animation: swayTopLeft 8s ease-in-out infinite alternate; }
-        .ornament-top-right { top: -30px; right: -30px; transform-origin: top right; transform: rotate(180deg); animation: swayTopRight 9s ease-in-out infinite alternate; }
-
-        @keyframes swayLeft { 0% { transform: rotate(-5deg) scale(1); } 100% { transform: rotate(10deg) scale(1.05); } }
-        @keyframes swayRight { 0% { transform: rotate(5deg) scale(1); } 100% { transform: rotate(-10deg) scale(1.05); } }
-        @keyframes swayTopLeft { 0% { transform: rotate(175deg) scale(1); } 100% { transform: rotate(190deg) scale(1.05); } }
-        @keyframes swayTopRight { 0% { transform: rotate(-175deg) scale(1); } 100% { transform: rotate(-190deg) scale(1.05); } }
-
-        /* =========================================
-           3. DAUN & KELOPAK BERJATUHAN DINAMIS
-           ========================================= */
-        .petal {
-            position: fixed; background: linear-gradient(135deg, #d4af37, #a88316);
-            border-radius: 15% 85% 15% 85%; pointer-events: none; z-index: 51; /* Z-index tinggi agar lewat depan layar */
-            box-shadow: 0 0 12px rgba(212, 175, 55, 0.6); animation: fallAnimation linear forwards;
-        }
-        .petal-bg {
-            z-index: 2; /* Jatuh di belakang konten (efek parallax) */
-            filter: blur(2px); opacity: 0.4 !important;
-        }
-
-        @keyframes fallAnimation {
-            0% { transform: translateY(-10vh) rotate(0deg) scale(0.5); opacity: 0; }
-            10% { opacity: 0.8; }
-            90% { opacity: 0.6; }
-            100% { transform: translateY(110vh) rotate(720deg) scale(1.2); opacity: 0; }
-        }
-
-        /* =========================================
-           4. KUNANG-KUNANG (FIREFLIES)
-           ========================================= */
-        .firefly {
-            position: fixed; width: 4px; height: 4px; background: #fdfbf7; border-radius: 50%;
-            box-shadow: 0 0 15px 3px #d4af37; pointer-events: none; z-index: 3;
-            animation: floatFirefly linear infinite alternate;
-        }
-        @keyframes floatFirefly {
-            0% { transform: translate(0, 0) scale(0.8); opacity: 0.3; }
-            50% { opacity: 1; }
-            100% { transform: translate(40px, -60px) scale(1.2); opacity: 0.2; }
-        }
-
-        /* =========================================
-           ANIMASI AMPLOP AWAL
-           ========================================= */
-        #layar-amplop {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;
-            background: rgba(10, 2, 5, 0.95); z-index: 100; transition: opacity 1.5s ease, visibility 1.5s ease; backdrop-filter: blur(8px);
-        }
-        .teks-petunjuk { font-family: 'Cinzel', serif; color: #d4af37; letter-spacing: 3px; margin-bottom: 50px; font-size: 1.1rem; text-transform: uppercase; animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 0.6; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-5px); } }
-
-        .envelope-wrapper { position: relative; width: 320px; height: 220px; cursor: pointer; transition: transform 0.3s ease; }
-        .envelope-wrapper:hover { transform: scale(1.05); }
-        .envelope { position: absolute; width: 100%; height: 100%; background: #4a000d; box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
-        .envelope::before { content: ''; position: absolute; bottom: 0; left: 0; border-left: 160px solid #5c0011; border-right: 160px solid #5c0011; border-top: 110px solid transparent; border-bottom: 110px solid #3d000a; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 3; }
-        .flap { position: absolute; top: 0; left: 0; border-left: 160px solid transparent; border-right: 160px solid transparent; border-top: 120px solid #7a0016; transform-origin: top; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); z-index: 4; }
-        .wax-seal { position: absolute; top: 100px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; background: radial-gradient(circle, #d4af37 30%, #a88316 100%); border-radius: 50%; z-index: 5; display: flex; justify-content: center; align-items: center; color: #3d000a; font-family: 'Great Vibes', cursive; font-size: 1.8rem; transition: opacity 0.4s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.6); }
-        .letter { position: absolute; bottom: 0; left: 5%; width: 90%; height: 95%; background: linear-gradient(to bottom, #fdfbf7, #f4eee1); z-index: 2; transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s; padding: 20px; text-align: center; border-radius: 8px; border: 1px solid #d4af37; }
-        .letter h3 { font-family: 'Great Vibes', cursive; color: #5c0011; font-size: 2.2rem; margin-top: 30px; }
-        .envelope-wrapper.open .flap { transform: rotateX(180deg); z-index: 1; }
-        .envelope-wrapper.open .wax-seal { opacity: 0; }
-        .envelope-wrapper.open .letter { transform: translateY(-90px); }
-
-        /* =========================================
-           KONTEN UTAMA
-           ========================================= */
-        #konten-utama {
-            display: none; opacity: 0; width: 100%; max-width: 600px; margin: 0 auto;
-            padding: 60px 20px 150px 20px; flex-direction: column; gap: 80px; z-index: 10;
-            transition: opacity 1.5s ease; position: relative;
-        }
-        .section-card {
-            background: rgba(30, 5, 10, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.5); opacity: 0; transform: translateY(60px) scale(0.95); transition: all 1s cubic-bezier(0.25, 1, 0.5, 1); position: relative; overflow: hidden;
-        }
-        .section-card.active { opacity: 1; transform: translateY(0) scale(1); }
-        h1.title { font-family: 'Great Vibes', cursive; font-size: 4rem; color: #d4af37; margin-bottom: 5px; text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4); line-height: 1.1; }
-        h2.subtitle { font-family: 'Cinzel', serif; font-size: 1.1rem; color: #e0bfb8; margin-bottom: 25px; letter-spacing: 2px; text-transform: uppercase; }
-        p.text { font-size: 1rem; line-height: 1.8; color: #e8e8e8; font-weight: 300; }
-        .divider { width: 60px; height: 2px; background: #d4af37; margin: 20px auto; opacity: 0.5; }
-        .typing-text { font-size: 1.1rem; min-height: 90px; color: #fdfbf7; font-style: italic; line-height: 1.7; margin-top: 15px;}
-
-        /* Galeri & Interaktif */
-        .photo-gallery { position: relative; width: 100%; height: 300px; margin: 20px auto; display: flex; justify-content: center; align-items: center; }
-        .photo { position: absolute; width: 160px; height: 200px; background: #fff; padding: 8px 8px 35px 8px; border-radius: 4px; box-shadow: 0 15px 30px rgba(0,0,0,0.7); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); cursor: pointer; }
-        .photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
-        .photo-1 { transform: rotate(-10deg) translateX(-60px); z-index: 1; }
-        .photo-2 { transform: rotate(5deg) translateX(60px); z-index: 2; }
-        .photo-3 { transform: rotate(-2deg) translateY(20px); z-index: 3; }
-        .photo:hover { transform: scale(1.2) translateY(-10px) rotate(0deg); z-index: 10; box-shadow: 0 25px 50px rgba(0,0,0,0.9); }
-
-        .flip-container { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-        .flip-card { background-color: transparent; width: 100%; height: 80px; perspective: 1000px; cursor: pointer; }
-        .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
-        .flip-card.flipped .flip-card-inner { transform: rotateX(180deg); }
-        .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.4); font-family: 'Cinzel', serif; font-size: 0.95rem; }
-        .flip-card-front { background: rgba(0,0,0,0.6); color: #d4af37; box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.1); }
-        .flip-card-back { background: rgba(212, 175, 55, 0.2); color: #fff; transform: rotateX(180deg); font-family: 'Montserrat', sans-serif; font-style: italic; padding: 10px; }
-
-        .secret-box { border: 1px dashed #d4af37; padding: 30px; border-radius: 15px; margin-top: 20px; transition: all 0.5s ease; }
-        .btn-reveal { background: linear-gradient(45deg, #d4af37, #f3e5ab, #d4af37); background-size: 200%; border: none; padding: 12px 30px; border-radius: 30px; color: #1a0b0e; font-family: 'Montserrat', sans-serif; font-weight: 600; cursor: pointer; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); transition: all 0.3s ease; }
-        .btn-reveal:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6); }
-        #secret-message { display: none; margin-top: 20px; font-size: 1.05rem; line-height: 1.8; color: #fdfbf7; animation: fadeIn 1s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-
+        /* Ekstra kecil untuk HP lipat / jadul */
         @media (max-width: 480px) {
-            h1.title { font-size: 3.2rem; }
-            .envelope-wrapper { width: 280px; height: 190px; }
-            .envelope::before { border-left: 140px solid #5c0011; border-right: 140px solid #5c0011; border-top: 95px solid transparent; border-bottom: 95px solid #3d000a; }
-            .flap { border-left: 140px solid transparent; border-right: 140px solid transparent; border-top: 105px solid #7a0016; }
-            .wax-seal { top: 85px; }
-            .ornament-corner { width: 110px; }
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .skill-badge {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="bird-container bird-1">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="#d4af37" xmlns="http://www.w3.org/2000/svg"><path d="M2.0003 13.9998C4.54462 13.2504 8.76121 11.2335 12.0003 13.9998C15.2394 11.2335 19.456 13.2504 22.0003 13.9998C22.0003 13.9998 17.5003 8.49976 12.0003 11.9998C6.5003 8.49976 2.0003 13.9998 2.0003 13.9998Z"/></svg>
-    </div>
-    <div class="bird-container bird-2">
-        <svg width="35" height="35" viewBox="0 0 24 24" fill="#d4af37" xmlns="http://www.w3.org/2000/svg"><path d="M2.0003 13.9998C4.54462 13.2504 8.76121 11.2335 12.0003 13.9998C15.2394 11.2335 19.456 13.2504 22.0003 13.9998C22.0003 13.9998 17.5003 8.49976 12.0003 11.9998C6.5003 8.49976 2.0003 13.9998 2.0003 13.9998Z"/></svg>
-    </div>
-    <div class="bird-container bird-3">
-        <svg width="25" height="25" viewBox="0 0 24 24" fill="#d4af37" xmlns="http://www.w3.org/2000/svg"><path d="M2.0003 13.9998C4.54462 13.2504 8.76121 11.2335 12.0003 13.9998C15.2394 11.2335 19.456 13.2504 22.0003 13.9998C22.0003 13.9998 17.5003 8.49976 12.0003 11.9998C6.5003 8.49976 2.0003 13.9998 2.0003 13.9998Z"/></svg>
-    </div>
-    <div class="bird-container bird-4">
-        <svg width="45" height="45" viewBox="0 0 24 24" fill="#d4af37" xmlns="http://www.w3.org/2000/svg"><path d="M2.0003 13.9998C4.54462 13.2504 8.76121 11.2335 12.0003 13.9998C15.2394 11.2335 19.456 13.2504 22.0003 13.9998C22.0003 13.9998 17.5003 8.49976 12.0003 11.9998C6.5003 8.49976 2.0003 13.9998 2.0003 13.9998Z"/></svg>
-    </div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
 
-    <svg class="ornament-corner ornament-bottom-left" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,200 Q20,100 80,0 Q60,100 0,200" fill="#d4af37" opacity="0.6"/>
-        <path d="M10,200 Q40,120 90,40 Q50,130 10,200" fill="#a88316" opacity="0.8"/>
-        <path d="M0,180 Q30,90 100,50 Q40,110 0,180" fill="#d4af37" opacity="0.5"/>
-    </svg>
-    <svg class="ornament-corner ornament-bottom-right" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100,200 Q80,100 20,0 Q40,100 100,200" fill="#d4af37" opacity="0.6"/>
-        <path d="M90,200 Q60,120 10,40 Q50,130 90,200" fill="#a88316" opacity="0.8"/>
-        <path d="M100,180 Q70,90 0,50 Q60,110 100,180" fill="#d4af37" opacity="0.5"/>
-    </svg>
-    <svg class="ornament-corner ornament-top-left" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,200 Q20,100 80,0 Q60,100 0,200" fill="#d4af37" opacity="0.4"/>
-        <path d="M10,200 Q40,120 90,40 Q50,130 10,200" fill="#a88316" opacity="0.6"/>
-    </svg>
-    <svg class="ornament-corner ornament-top-right" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100,200 Q80,100 20,0 Q40,100 100,200" fill="#d4af37" opacity="0.4"/>
-        <path d="M90,200 Q60,120 10,40 Q50,130 90,200" fill="#a88316" opacity="0.6"/>
-    </svg>
+    <div class="container">
+        
+        <header class="hero">
+            <img src="alvian.png" alt="Alvian Nur Firdaus" class="hero-img" onerror="this.src='https://ui-avatars.com/api/?name=Alvian+Nur+Firdaus&background=0D8ABC&color=fff&size=180'">
+            <div class="hero-text">
+                <h1>Alvian Nur Firdaus</h1>
+                <h2>Software Engineer | IoT Engineer | Beswan Djarum '39</h2>
+                <p>📍 Banyuwangi, Jawa Timur, Indonesia<br>
+                   Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat melalui integrasi Web Development, Mobile App, dan Internet of Things (IoT).</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/alvian-nur-firdaus" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:alviannurfirdaus1@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:081235026920" class="social-btn"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </header>
 
-    <div id="layar-amplop">
-        <p class="teks-petunjuk">Sentuh Amplopnya</p>
-        <div class="envelope-wrapper" onclick="bukaAmplop()">
-            <div class="flap"></div>
-            <div class="wax-seal">A</div>
-            <div class="letter"><h3>Untuk<br>Azizah ♡</h3></div>
-            <div class="envelope"></div>
+        <div class="grid-2">
+            <div class="glass-card">
+                <h2 class="section-title">Ringkasan</h2>
+                <p style="color: var(--text-muted); text-align: justify;">
+                    Sebagai seorang <strong>Software Engineer</strong>, saya memiliki pengalaman dalam mengembangkan aplikasi web, mobile, serta sistem berbasis <strong>Internet of Things (IoT)</strong>. Saya telah merancang dan mengembangkan lebih dari tiga sistem yang bertujuan meningkatkan efisiensi kerja dan mendukung proses digitalisasi dalam organisasi.
+                    <br><br>
+                    Saya memiliki kemampuan kepemimpinan, manajemen waktu, dan komunikasi yang efektif. Saat ini saya mencari peluang di perusahaan teknologi atau startup untuk tumbuh bersama dan mengembangkan keterampilan saya di bidang IT.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h2 class="section-title">Keahlian & Sertifikasi</h2>
+                <div class="skills-wrapper">
+                    <span class="skill-badge"><i class="fas fa-code"></i> Web Development</span>
+                    <span class="skill-badge"><i class="fab fa-android"></i> Android Development</span>
+                    <span class="skill-badge"><i class="fas fa-microchip"></i> Internet of Things (IoT)</span>
+                    <span class="skill-badge"><i class="fab fa-laravel"></i> Laravel</span>
+                    <span class="skill-badge"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                    <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+                    <span class="skill-badge"><i class="fas fa-microchip"></i> Arduino IDE</span>
+                    <span class="skill-badge"><i class="fab fa-aws"></i> AWS Cloud</span>
+                </div>
+                <br>
+                <h3 style="color: white; font-size: 1.1rem; margin-bottom: 10px;">Sertifikasi Utama:</h3>
+                <ul style="color: var(--text-muted); font-size: 0.95rem; padding-left: 20px;">
+                    <li>AWS Cloud Practitioner Essentials</li>
+                    <li>MIKROTIK MTCNA</li>
+                    <li>Belajar Dasar AI (Dicoding)</li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div id="konten-utama">
-        <section class="section-card reveal">
-            <h2 class="subtitle">Selamat Ulang Tahun</h2>
-            <h1 class="title">♡ Azizah Khoirun Nisa ♡</h1>
-            <div class="divider"></div>
-            <div class="typing-text" id="typewriter"></div>
-        </section>
-        <section class="section-card reveal">
-            <h2 class="subtitle">Our Memories</h2>
-            <p class="text" style="font-size: 0.85rem; color: #b3b3b3; font-style: italic;">(Sentuh fotonya untuk melihat jelas)</p>
-            <div class="photo-gallery">
-                <div class="photo photo-1"><img src="11.jpeg" alt="Kenangan 1"></div>
-                <div class="photo photo-2"><img src="12.jpeg" alt="Kenangan 2"></div>
-                <div class="photo photo-3"><img src="10.jpeg" alt="Kenangan 3"></div>
-            </div>
-        </section>
-        <!-- <section class="section-card reveal">
-            <h2 class="subtitle">3 Hal Tentangmu</h2>
-            <p class="text">Klik kartu di bawah ini untuk membukanya</p>
-            <div class="flip-container">
-                <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">Alasan Pertama</div>
-                        <div class="flip-card-back">Senyummu selalu jadi penyemangat di hari-hariku yang berat.</div>
+        <div class="glass-card">
+            <h2 class="section-title">Pengalaman Kerja & Organisasi</h2>
+            <div class="grid-2">
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Nov 2025 - Present</div>
+                        <div class="timeline-title">IoT Specialist</div>
+                        <div class="timeline-subtitle">Aptavis · Bandung</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Melakukan riset teknologi IoT terbaru, mengembangkan prototype perangkat mulai dari firmware hingga koneksi cloud, dan menguji performa sensor.</p>
                     </div>
-                </div>
-                <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">Alasan Kedua</div>
-                        <div class="flip-card-back">Ketulusan hatimu membuatku merasa jadi orang paling beruntung.</div>
-                    </div>
-                </div>
-                <div class="flip-card" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">Alasan Ketiga</div>
-                        <div class="flip-card-back">Karena kamu adalah kamu, dan itu sudah lebih dari cukup.</div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- <section class="section-card reveal">
-            <h2 class="subtitle">Sebuah Pesan</h2>
-            <div style="border-left: 3px solid #d4af37; padding-left: 20px; text-align: left; margin: 20px 0; font-style: italic; color: #e0bfb8;">
-                <p>"Aku tidak pernah meminta hal yang sempurna. Aku hanya meminta seseorang yang membuat ketidaksempurnaan terasa indah. Dan aku menemukannya pada dirimu."</p>
-            </div>
-            <p class="text" style="text-align: right; margin-top: 10px;">- Alvian</p>
-        </section>
-        <section class="section-card reveal">
-            <h2 class="subtitle">Harapanku Untukmu</h2>
-            <div class="divider"></div>
-            <p class="text">Di usiamu yang ke-21 ini, aku berdoa semoga Allah selalu melapangkan jalanmu, mengangkat segala kesedihanmu, dan mewujudkan semua mimpi-mimpi besarmu. Semoga kita terus melangkah bersama.</p>
-        </section>
-        <section class="section-card reveal">
-            <h2 class="subtitle">A Little Surprise</h2>
-            <div class="secret-box" id="box-rahasia">
-                <button class="btn-reveal" onclick="bukaRahasia(this)">Klik Untuk Membuka</button>
-                <div id="secret-message">
-                    <p>Terima kasih sudah bertahan sejauh ini, Sayang. </p>
-                </div>
-            </div>
-        </section> -->
-        <section class="section-card reveal">
-            <h2 class="subtitle">Sekali Lagi...</h2>
-            <h1 class="title" style="font-size: 3.5rem; margin-top: 20px;">Happy Birthday!</h1>
-            <p class="text" style="margin-top: 20px;">Love You Sayank.....♡♡</p>
-            <h2 class="subtitle" style="color: #d4af37; margin-top: 10px;">~ ALVIAN ~</h2>
-        </section>
-    </div>
 
-    <audio id="backsound" loop src="2.mp3"></audio>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mar 2025 - Present</div>
+                        <div class="timeline-title">Founder Ijendev.id</div>
+                        <div class="timeline-subtitle">Ijendev.id | Ijend Developer Indonesia · Banyuwangi</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Founder dari Ijendev. Berhasil menyelesaikan 9+ project mencakup pengembangan web, aplikasi mobile, dan sistem berbasis IoT.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jul 2024 - Des 2024</div>
+                        <div class="timeline-title">Full Stack Engineer</div>
+                        <div class="timeline-subtitle">PT PLN (Persero) · Sidoarjo</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Pengembangan aplikasi berbasis IoT dan Flutter untuk monitoring tangki BBM pada genset PT PLN UP2B Jatim.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Ags 2023 - Ags 2024</div>
+                        <div class="timeline-title">Awardee Scholarship</div>
+                        <div class="timeline-subtitle">Djarum Beasiswa Plus</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Okt 2021 - Feb 2023</div>
+                        <div class="timeline-title">Organizing Committee</div>
+                        <div class="timeline-subtitle">Himpunan Mahasiswa Teknologi Informasi (HMTI) Polinema · Malang</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jan 2020 - Jul 2020</div>
+                        <div class="timeline-title">Network Engineer</div>
+                        <div class="timeline-subtitle">Dinas Komunikasi dan Informatika · Banyuwangi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="grid-2">
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jul 2021 - Sep 2025</div>
+                        <div class="timeline-title">Politeknik Negeri Malang</div>
+                        <div class="timeline-subtitle">Gelar Sarjana Terapan (D4), Teknologi Informasi</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Lulus dengan IPK 3.87.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Feb 2024 - Jun 2024</div>
+                        <div class="timeline-title">Studi Independen (Kampus Merdeka)</div>
+                        <div class="timeline-subtitle">RevoU x AWS</div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Mempelajari tentang Data Analytics, Cloud Computing (AWS), dan Artificial Intelligence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 20px;">Aktivitas & Inovasi </h2>
+        <div class="grid-3" id="dynamic-posts-container">
+            </div>
+
+    </div>
 
     <script>
-        function bukaAmplop() {
-            const wrapper = document.querySelector('.envelope-wrapper');
-            const layarAmplop = document.getElementById('layar-amplop');
-            const kontenUtama = document.getElementById('konten-utama');
-
-            wrapper.classList.add('open');
-            const audio = document.getElementById("backsound");
-            audio.volume = 0.5;
-            audio.play().catch(e => console.log("Autoplay diblokir browser."));
-
-            setTimeout(() => {
-                layarAmplop.style.opacity = '0';
-                setTimeout(() => {
-                    layarAmplop.style.visibility = 'hidden';
-                    kontenUtama.style.display = 'flex';
-                    
-                    setTimeout(() => {
-                        kontenUtama.style.opacity = '1';
-                        setTimeout(typeWriter, 800);
-                        
-                        // Menjalankan Kelopak Bunga (Lebih Cepat & Banyak)
-                        setInterval(buatPetal, 150); 
-                        
-                        // Menjalankan Kunang-kunang di Background
-                        buatKunangKunang();
-                    }, 100);
-                }, 1500);
-            }, 2500);
-        }
-
-        const txt = "Untuk seorang perempuan hebat yang kehadirannya membuat duniaku menjadi jauh lebih berwarna dan bermakna...";
-        let i = 0;
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("typewriter").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
+        // Data Postingan LinkedIn Anda
+        const linkedinData = [
+            {
+                tag: "#JagoanDigital #Innovation",
+                title: "Jagoan Digital Banyuwangi 2025",
+                excerpt: "Sebuah program pengembangan talenta dan inovasi teknologi dari Pemkab Banyuwangi. Saya bersyukur telah terpilih sebagai Jagoan Digital Banyuwangi 2025. Penghargaan ini menjadi motivasi untuk terus berdampak.",
+                image: "https://media.licdn.com/dms/image/v2/D5622AQFkbgkfxCqxsw/feedshare-shrink_1280/B56ZpuQIekJwAs-/0/1762786320001?e=1783555200&v=beta&t=6SJlokmiyvhA-3jYjNfSlYGHmXd6ktwOjox62p_Xk0I", 
+                location: "Banyuwangi",
+                likes: "104",
+                comments: "13 comments"
+            },
+            {
+                tag: "#SmartFarming #IoT #Sitanam",
+                title: "SITANAM (Smart Precision Farming)",
+                excerpt: "Melalui SITANAM, kami berupaya menghadirkan sistem pertanian cerdas yang membantu petani mengelola lahan dengan lebih efisien, terukur, dan berkelanjutan. Terintegrasi ESP32, Firebase, dan Flutter App.",
+                image: "https://media.licdn.com/dms/image/v2/D5622AQFKvEdiRD_QXg/feedshare-shrink_800/B56ZncUvQRKIAg-/0/1760338074418?e=1783555200&v=beta&t=ZENAmYiFidVwpAJHXRQAIpH4WLq4iZ37iHBuGCokBdc", 
+                location: "Desa Aliyan, Banyuwangi",
+                likes: "100",
+                comments: "8 comments"
+            },
+            {
+                tag: "#CloudInfra #TechCommunity",
+                title: "Dicoding Developer Conference",
+                excerpt: "Dengan bangga menjadi peserta Dicoding Developer Conference, khususnya pada trek AI for Cloud Infra and DevOps. Transisi dari DevOps tradisional menuju AIOps adalah keniscayaan.",
+                image: "https://media.licdn.com/dms/image/v2/D5622AQHJQW-Zsi8xZQ/feedshare-shrink_800/B56Z3ZFuDaGsAg-/0/1777463648720?e=1783555200&v=beta&t=Z6FFcLreeuPcrvcMIgSK61sOOwtzHJpA37lm7j8A8VA", 
+                location: "Tech Event",
+                likes: "31",
+                comments: "4 comments"
+            },
+            {
+                tag: "#KeamananSiber #KMIPNV",
+                title: "Finalis Keamanan Siber KMIPN V",
+                excerpt: "Very grateful and proud to share that we have succeeded in passing a big challenge at KMIPN V at PENS Surabaya. Humbled to announce that we qualified as finalists in this competitive category.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GRx7ug2Z1NGrysinRTgqr0DaRsh4silsFA&s", 
+                location: "PENS Surabaya",
+                likes: "20",
+                comments: "Finalist"
             }
+        ];
+
+        // Fungsi Render HTML
+        function renderPosts() {
+            const container = document.getElementById('dynamic-posts-container');
+            if (!container) return; 
+
+            let htmlContent = '';
+
+            linkedinData.forEach(post => {
+                htmlContent += `
+                    <div class="glass-card post-card">
+                        <div class="post-image-wrapper">
+                            <img src="${post.image}" alt="${post.title}">
+                        </div>
+                        <div>
+                            <span class="post-tag">${post.tag}</span>
+                            <h3 class="post-title">${post.title}</h3>
+                            <p class="post-excerpt">${post.excerpt}</p>
+                        </div>
+                        <div class="post-footer">
+                            <span><i class="fas fa-map-marker-alt"></i> ${post.location}</span>
+                            <span><i class="fas fa-heart" style="color: var(--accent-4)"></i> ${post.likes} &nbsp; <i class="fas fa-comment"></i> ${post.comments}</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
         }
 
-        const reveals = document.querySelectorAll(".reveal");
-        const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-        const revealOnScroll = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("active"); } });
-        }, revealOptions);
-        reveals.forEach(reveal => { revealOnScroll.observe(reveal); });
-
-        function bukaRahasia(btn) {
-            btn.style.display = 'none';
-            document.getElementById('secret-message').style.display = 'block';
-            document.getElementById('box-rahasia').style.border = '1px solid #d4af37';
-            document.getElementById('box-rahasia').style.background = 'rgba(212, 175, 55, 0.05)';
-        }
-
-        // LOGIKA KELOPAK BUNGA DIPERBANYAK (Parallax 3D)
-        function buatPetal() {
-            // Membuat 2 kelopak sekaligus setiap kali fungsi dipanggil (agar sangat lebat)
-            for(let j=0; j<2; j++) {
-                const petal = document.createElement("div");
-                petal.classList.add("petal");
-                
-                // Efek 3D Parallax: Beberapa kelopak jatuh di belakang (blur), beberapa di depan
-                if(Math.random() > 0.6) {
-                    petal.classList.add("petal-bg"); 
-                }
-
-                const size = Math.random() * 10 + 6; // Ukuran bervariasi
-                petal.style.width = size + "px"; 
-                petal.style.height = size * 1.3 + "px"; 
-                petal.style.left = Math.random() * 100 + "vw";
-                petal.style.animationDuration = (Math.random() * 4 + 5) + "s"; // Jatuh lebih dinamis (5-9 detik)
-                
-                document.body.appendChild(petal);
-                setTimeout(() => { petal.remove(); }, 9000); // Hapus memori
-            }
-        }
-
-        // LOGIKA KUNANG-KUNANG (Partikel Statis Background)
-        function buatKunangKunang() {
-            for (let k = 0; k < 25; k++) {
-                const firefly = document.createElement("div");
-                firefly.classList.add("firefly");
-                firefly.style.left = Math.random() * 100 + "vw";
-                firefly.style.top = Math.random() * 100 + "vh";
-                firefly.style.animationDuration = (Math.random() * 10 + 5) + "s";
-                firefly.style.animationDelay = (Math.random() * 5) + "s";
-                document.body.appendChild(firefly);
-            }
-        }
+        // Panggil render saat DOM selesai dimuat
+        document.addEventListener('DOMContentLoaded', renderPosts);
     </script>
 </body>
 </html>
