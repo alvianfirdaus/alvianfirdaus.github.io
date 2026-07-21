@@ -3,126 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Mitra Net Abadi - Internet Super Cepat Baleendah</title>
+    <title>CV Mitra Net Abadi - Koneksi Cepat Baleendah</title>
+    <!-- Ganti Font ke Poppins untuk tampilan modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Reset dan Variabel */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
-        
-        /* Header & Hero Section */
-        header { background: linear-gradient(135deg, #0056b3, #0084ff); color: #fff; padding: 60px 20px; text-align: center; }
-        header h1 { font-size: 2.5em; margin-bottom: 10px; letter-spacing: 1px; }
-        header p { font-size: 1.2em; max-width: 600px; margin: 0 auto; opacity: 0.9; }
+        /* --- CSS Reset & Global --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f1f4f8; color: #333; line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        ul { list-style: none; }
 
-        /* Container Utama */
-        .container { max-width: 1100px; margin: -30px auto 40px; padding: 0 20px; }
+        /* --- Header & Navigasi --- */
+        header { 
+            background: linear-gradient(135deg, #162447 0%, #1f4068 50%, #162447 100%);
+            color: #fff; 
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        nav.container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 { font-size: 1.8em; font-weight: 700; letter-spacing: 1px; color: #fff; }
+        .logo h1 span { color: #2a9df4; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a:hover { color: #a164f9; transform: translateY(-2px); }
 
-        /* Pricing Section */
-        .pricing-header { text-align: center; margin: 60px 0 30px; }
-        .pricing-header h2 { color: #0056b3; font-size: 2em; }
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, #162447 0%, #a164f9 100%);
+            color: #fff;
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before { /* Grafik Latar Belakang Abstrak */
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(42, 157, 244, 0.1) 0%, rgba(161, 100, 249, 0) 70%);
+            transform: rotate(30deg); z-index: 1;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+        .hero h2 { font-size: 3.5em; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+        .hero h2 span { background: linear-gradient(to right, #2a9df4, #a164f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.3em; margin-bottom: 40px; opacity: 0.9; }
+        .btn-hero { background: linear-gradient(to right, #2a9df4, #a164f9); color: #fff; padding: 15px 40px; border-radius: 50px; font-weight: 600; font-size: 1.1em; display: inline-block; box-shadow: 0 10px 20px rgba(161, 100, 249, 0.3); }
+        .btn-hero:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(161, 100, 249, 0.4); }
+
+        /* --- Container Utama --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Fitur Section --- */
+        .features { padding: 80px 0; text-align: center; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .feature-item { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .feature-item:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .feature-icon { font-size: 2.5em; color: #2a9df4; margin-bottom: 20px; }
+
+        /* --- Pricing Section --- */
+        .pricing { background-color: #fff; padding: 80px 0; }
+        .pricing-header { text-align: center; margin-bottom: 60px; }
+        .pricing-header h2 { font-size: 2.8em; color: #162447; font-weight: 700; }
         .pricing-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         
-        /* Desain Kartu Paket */
-        .card { background: #fff; border-radius: 15px; padding: 40px 30px; width: 100%; max-width: 320px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: all 0.3s ease; border: 1px solid #eaeaea; position: relative; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        /* --- Desain Kartu Paket Elegan --- */
+        .card { 
+            background: #fff; border-radius: 15px; padding: 50px 30px; width: 100%; max-width: 350px; 
+            text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eaeaea; 
+            position: relative; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        .card:hover { transform: translateY(-15px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         
-        /* Gaya Khusus untuk Best Seller */
-        .card.best-seller { border: 2px solid #ff9800; transform: scale(1.05); box-shadow: 0 15px 30px rgba(255,152,0,0.15); z-index: 1; }
-        .card.best-seller:hover { transform: scale(1.05) translateY(-10px); }
-        .badge { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: #ff9800; color: #fff; padding: 8px 20px; border-radius: 30px; font-weight: bold; font-size: 0.9em; letter-spacing: 1px; text-transform: uppercase; }
+        /* --- Gaya Khusus Best Seller (Glowing & Gradasi) --- */
+        .card.best-seller { 
+            border: none; transform: scale(1.08); 
+            background: linear-gradient(135deg, #ffffff 0%, #fdfdff 100%);
+            box-shadow: 0 20px 40px rgba(161, 100, 249, 0.15); 
+            z-index: 10; 
+        }
+        .card.best-seller::after { /* Efek Glow */
+            content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px;
+            background: linear-gradient(135deg, #2a9df4, #a164f9);
+            border-radius: 20px; z-index: -1; opacity: 0.15; filter: blur(10px);
+        }
+        .card.best-seller:hover { transform: scale(1.08) translateY(-15px); }
+        .badge { 
+            position: absolute; top: -20px; left: 50%; transform: translateX(-50%); 
+            background: linear-gradient(to right, #ff9800, #ff5722); color: #fff; 
+            padding: 8px 25px; border-radius: 30px; font-weight: 700; font-size: 0.85em; 
+            letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 5px 10px rgba(255,152,0,0.3);
+        }
         
-        /* Isi Kartu */
-        .card h3 { font-size: 1.5em; color: #333; margin-bottom: 15px; }
-        .speed { font-size: 3em; font-weight: 800; color: #0056b3; line-height: 1; margin-bottom: 5px; }
-        .speed small { font-size: 0.3em; color: #777; font-weight: normal; }
-        .price { font-size: 1.4em; color: #555; font-weight: 600; margin: 20px 0; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        /* --- Isi Kartu Paket --- */
+        .card h3 { font-size: 1.6em; color: #162447; margin-bottom: 20px; font-weight: 600; }
+        .speed { font-size: 4em; font-weight: 800; color: #162447; line-height: 1; margin-bottom: 5px; }
+        .speed span { background: linear-gradient(to right, #2a9df4, #a164f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .speed small { font-size: 0.3em; color: #777; font-weight: 400; }
+        .price { font-size: 1.5em; color: #555; font-weight: 600; margin: 30px 0; padding-bottom: 25px; border-bottom: 1px solid #eee; }
+        .price small { font-size: 0.6em; color: #888; font-weight: 400; }
+        .card-features { margin-bottom: 30px; color: #666; text-align: left; }
+        .card-features li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
         
-        /* Tombol */
-        .btn { display: inline-block; padding: 12px 25px; border-radius: 50px; font-weight: bold; text-decoration: none; transition: all 0.3s ease; width: 100%; }
-        .btn-primary { background: #0056b3; color: #fff; }
-        .btn-primary:hover { background: #004494; }
-        .btn-whatsapp { background: #25D366; color: #fff; margin-top: 15px; }
-        .btn-whatsapp:hover { background: #20bd5a; }
+        /* --- Tombol WhatsApp Gradasi --- */
+        .btn-whatsapp { 
+            background: linear-gradient(to right, #25D366, #128C7E); color: #fff; 
+            padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; 
+            width: 100%; display: block; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2); 
+        }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); }
 
-        /* Contact Section */
-        .contact-section { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-top: 60px; text-align: center; }
-        .contact-section h2 { color: #333; margin-bottom: 20px; }
-        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; }
-        .info-item { display: flex; align-items: center; gap: 10px; color: #555; font-size: 1.1em; }
+        /* --- Kontak Section --- */
+        .contact { padding: 80px 0; background-color: #f1f4f8; text-align: center; }
+        .contact-card { background: #fff; padding: 60px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto; }
+        .contact h2 { font-size: 2.8em; color: #162447; margin-bottom: 30px; font-weight: 700; }
+        .contact-info { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-bottom: 40px; }
+        .info-item { display: flex; align-items: center; gap: 15px; color: #555; font-size: 1.2em; text-align: left;}
+        .contact-icon { font-size: 1.5em; color: #a164f9; }
         
-        /* Footer */
-        footer { text-align: center; padding: 30px; color: #888; font-size: 0.9em; border-top: 1px solid #ddd; margin-top: 40px; }
+        /* --- Footer --- */
+        footer { background-color: #162447; color: rgba(255,255,255,0.7); text-align: center; padding: 40px; font-size: 0.9em; }
 
-        /* Responsif untuk layar HP */
+        /* --- Responsif --- */
+        @media (max-width: 992px) {
+            .hero h2 { font-size: 2.8em; }
+            .card.best-seller { transform: scale(1); border: 2px solid rgba(161, 100, 249, 0.3); }
+            .pricing-cards { gap: 20px; }
+        }
         @media (max-width: 768px) {
-            .card.best-seller { transform: scale(1); }
-            .card.best-seller:hover { transform: translateY(-5px); }
-            .contact-info { gap: 15px; flex-direction: column; }
+            .nav-links { display: none; }
+            .contact-info { gap: 20px; flex-direction: column; }
+            .contact-card { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Bagian Header Utama -->
+    <!-- --- Header --- -->
     <header>
-        <h1>CV Mitra Net Abadi</h1>
-        <p>Solusi Internet Cepat, Stabil, dan Terjangkau untuk Warga Baleendah dan Sekitarnya.</p>
+        <nav class="container">
+            <div class="logo">
+                <h1>Mitra<span>Net</span> Abadi</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#pricing">Paket</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        
-        <!-- Bagian Daftar Harga -->
-        <div class="pricing-header">
-            <h2>Pilih Paket Internet Anda</h2>
+    <!-- --- Hero Section --- -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Koneksi <span>Cepat & Stabil</span> di Baleendah</h2>
+            <p>Nikmati internet tanpa batas untuk rumah dan bisnis Anda. Pasang sekarang dan rasakan perbedaannya.</p>
+            <a href="#pricing" class="btn-hero">Lihat Paket</a>
         </div>
+    </section>
 
-        <div class="pricing-cards">
-            <!-- Paket 1 : Best Seller -->
-            <div class="card best-seller">
-                <div class="badge">Paling Laris</div>
-                <h3>Paket 1</h3>
-                <div class="speed">10<small> Mbps</small></div>
-                <div class="price">Rp 100.000 <span style="font-size: 0.6em; font-weight: normal;">/bulan</span></div>
-                <a href="https://wa.me/6281235026920?text=Halo%20CV%20Mitra%20Net%20Abadi,%20saya%20tertarik%20berlangganan%20Paket%201%20(10%20Mbps)." class="btn btn-whatsapp" target="_blank">Pesan via WhatsApp</a>
+    <!-- --- Fitur Section --- -->
+    <section class="features container">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <h3>Kecepatan Tinggi</h3>
+                <p>Koneksi serat optik yang stabil dan cepat.</p>
             </div>
-
-            <!-- Paket 2 -->
-            <div class="card">
-                <h3>Paket 2</h3>
-                <div class="speed">20<small> Mbps</small></div>
-                <div class="price">Rp 200.000 <span style="font-size: 0.6em; font-weight: normal;">/bulan</span></div>
-                <a href="https://wa.me/6281235026920?text=Halo%20CV%20Mitra%20Net%20Abadi,%20saya%20tertarik%20berlangganan%20Paket%202%20(20%20Mbps)." class="btn btn-whatsapp" target="_blank">Pesan via WhatsApp</a>
+            <div class="feature-item">
+                <div class="feature-icon">💸</div>
+                <h3>Harga Terjangkau</h3>
+                <p>Paket internet sesuai kebutuhan dompet Anda.</p>
             </div>
-
-            <!-- Paket 3 -->
-            <div class="card">
-                <h3>Paket 3</h3>
-                <div class="speed">30<small> Mbps</small></div>
-                <div class="price">Rp 300.000 <span style="font-size: 0.6em; font-weight: normal;">/bulan</span></div>
-                <a href="https://wa.me/6281235026920?text=Halo%20CV%20Mitra%20Net%20Abadi,%20saya%20tertarik%20berlangganan%20Paket%203%20(30%20Mbps)." class="btn btn-whatsapp" target="_blank">Pesan via WhatsApp</a>
+            <div class="feature-item">
+                <div class="feature-icon">24H</div>
+                <h3>Dukungan Lokal 24/7</h3>
+                <p>Tim teknisi kami siap membantu Anda kapan saja.</p>
             </div>
         </div>
+    </section>
 
-        <!-- Bagian Kontak dan Alamat -->
-        <div class="contact-section">
-            <h2>Hubungi Kami</h2>
+    <!-- --- Pricing Section --- -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <h2>Pilih Paket Internet Anda</h2>
+            </div>
+
+            <div class="pricing-cards">
+                <!-- Paket 1 : Best Seller (Glowing & Gradasi) -->
+                <div class="card best-seller">
+                    <div class="badge">Paling Laris</div>
+                    <h3>Paket 1</h3>
+                    <div class="speed"><span>10</span><small> Mbps</small></div>
+                    <div class="price">Rp 100.000 <small>/bulan</small></div>
+                    <ul class="card-features">
+                        <li>✅ Internet Sepuasnya</li>
+                        <li>✅ Up to 10Mbps</li>
+                        <li>✅ Tanpa Kuota (FUP)</li>
+                    </ul>
+                    <a href="https://wa.me/6281235026920?text=Halo%20CV%20Mitra%20Net%20Abadi,%20saya%20tertarik%20berlangganan%20Paket%201%20(10%20Mbps)." class="btn-whatsapp" target="_blank">Pesan via WhatsApp</a>
+                </div>
+
+                <!-- Paket 2 -->
+                <div class="card">
+                    <h3>Paket 2</h3>
+                    <div class="speed"><span>20</span><small> Mbps</small></div>
+                    <div class="price">Rp 200.000 <small>/bulan</small></div>
+                    <ul class="card-features">
+                        <li>✅ Internet Sepuasnya</li>
+                        <li>✅ Up to 20Mbps</li>
+                        <li>✅ Tanpa Kuota (FUP)</li>
+                    </ul>
+                    <a href="https://wa.me/6281235026920?text=Halo%20CV%20Mitra%20Net%20Abadi,%20saya%20tertarik%20berlangganan%20Paket%202%20(20%20Mbps)." class="btn-whatsapp" target="_blank">Pesan via WhatsApp</a>
+                </div>
+
+                <!-- Paket 3 -->
+                <div class="card">
+                    <h3>Paket 3</h3>
+                    <div class="speed"><span>30</span><small> Mbps</small></div>
+                    <div class="price">Rp 300.000 <small>/bulan</small></div>
+                    <ul class="card-features">
+                        <li>✅ Internet Sepuasnya</li>
+                        <li>✅ Up to 30Mbps</li>
+                        <li>✅ Tanpa Kuota (FUP)</li>
+                    </ul>
+                    <a href="https://wa.me/6281235026920?text=Halo%20CV%20Mitra%20Net%20Abadi,%20saya%20tertarik%20berlangganan%20Paket%203%20(30%20Mbps)." class="btn-whatsapp" target="_blank">Pesan via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Kontak Section --- -->
+    <section id="contact" class="contact">
+        <div class="container contact-card">
+            <h2>Lokasi & Kontak Kami</h2>
             <div class="contact-info">
                 <div class="info-item">
-                    <strong>📍 Kantor:</strong> Kp. Pak Haji Azay, Baleendah
+                    <span class="contact-icon">📍</span>
+                    <p><strong>Alamat Kantor:</strong><br>Kp. Pak Haji Azay, Baleendah, Jawa Barat</p>
                 </div>
                 <div class="info-item">
-                    <strong>📞 WhatsApp:</strong> 0812-3502-6920
+                    <span class="contact-icon">📞</span>
+                    <p><strong>WhatsApp:</strong><br>0812-3502-6920</p>
                 </div>
             </div>
-            <p style="color: #666;">Pemasangan cepat dan teknisi siap melayani keluhan Anda 24 jam.</p>
+            <a href="https://wa.me/6281235026920?text=Halo%20Pak%20Haji%20Azay,%20saya%20warga%20Baleendah%20dan%20tertarik%20dengan%20layanan%20Mitra%20Net." class="btn-hero btn-whatsapp" target="_blank" style="margin-top: 0;">Pesan Via WhatsApp</a>
         </div>
+    </section>
 
-    </div>
-
-    <!-- Footer -->
+    <!-- --- Footer --- -->
     <footer>
-        &copy; 2026 CV Mitra Net Abadi. Semua Hak Cipta Dilindungi.<br>
-        Internet Cepat untuk Desa Baleendah.
+        &copy; 2026 CV Mitra Net Abadi. Semua Hak Cipta Dilindungi. Internet Cepat Desa Baleendah.
     </footer>
 
 </body>
