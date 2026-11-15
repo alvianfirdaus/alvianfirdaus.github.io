@@ -1,585 +1,81 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvian Nur Firdaus | Portfolio</title>
-    
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Alvian Nur Firdaus | Portfolio">
-    <meta name="description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
-    <meta name="author" content="Alvian Nur Firdaus">
-
-    <!-- Favicon (Ikon kecil di tab browser) -->
-    <link rel="icon" type="image/png" href="alvian.png">
-
-    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
-    <meta property="og:title" content="Alvian Nur Firdaus | Portfolio">
-    <meta property="og:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
-    <!-- PENTING: URL gambar untuk OG harus absolut (pakai https://), tidak bisa lokal seperti 'alvian.png' -->
-    <meta property="og:image" content="https://github.com/alvianfirdaus/alvianfirdaus.github.io/blob/main/alvian.png?raw=true">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://alvianfirdaus.github.io"> <!-- Ganti dengan link web aslimu nanti -->
-    <meta property="twitter:title" content="Alvian Nur Firdaus | Portfolio">
-    <meta property="twitter:description" content="Software Engineer & IoT Specialist. Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat.">
-    <meta property="twitter:image" content="https://github.com/alvianfirdaus/alvianfirdaus.github.io/blob/main/alvian.png?raw=true">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-1: #00f2fe;
-            --accent-2: #4facfe;
-            --accent-3: #f093fb;
-            --accent-4: #f5576c;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: var(--bg-gradient);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Background Effects */
-        .blob {
-            position: fixed;
-            filter: blur(80px);
-            z-index: -1;
-            opacity: 0.4;
-            border-radius: 50%;
-            animation: float 10s infinite ease-in-out alternate;
-        }
-        .blob-1 { top: -100px; left: -100px; width: 400px; height: 400px; background: #4facfe; }
-        .blob-2 { bottom: -100px; right: -100px; width: 300px; height: 300px; background: #f093fb; }
-
-        @keyframes float {
-            0% { transform: translateY(0) scale(1); }
-            100% { transform: translateY(50px) scale(1.1); }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Glassmorphism Card */
-        .glass-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            display: inline-block;
-            background: linear-gradient(to right, var(--accent-1), var(--accent-3));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .hero-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
-            border: 5px solid rgba(255,255,255,0.1);
-            background-color: #1e293b; 
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-
-        .hero-text h2 {
-            font-size: 1.5rem;
-            color: var(--accent-1);
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .hero-text p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            max-width: 600px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            border: 1px solid var(--card-border);
-            transition: 0.3s;
-        }
-
-        .social-btn:hover {
-            background: var(--accent-2);
-            transform: scale(1.1);
-            box-shadow: 0 0 15px var(--accent-2);
-        }
-
-        /* Grid Layouts - DIPERBAIKI UNTUK MOBILE */
-        .grid-2 {
-            display: grid;
-            /* Menggunakan min() mencegah elemen jebol di layar kecil */
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
-            gap: 25px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-            gap: 25px;
-        }
-
-        /* Timeline / Experience & Education */
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 25px;
-            border-left: 2px solid var(--accent-3);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: var(--accent-3);
-            box-shadow: 0 0 10px var(--accent-3);
-        }
-
-        .timeline-date {
-            color: var(--accent-1);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .timeline-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        .timeline-subtitle {
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-        }
-
-        /* Skills */
-        .skills-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill-badge {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 18px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: white;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: 0.3s;
-        }
-
-        .skill-badge:hover {
-            background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-            border-color: transparent;
-            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* Dynamic Post Cards */
-        .post-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            padding: 20px;
-        }
-
-        .post-image-wrapper {
-            width: 100%;
-            height: 180px;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 15px;
-            background-color: #1e293b;
-        }
-
-        .post-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .post-card:hover .post-image-wrapper img {
-            transform: scale(1.05);
-        }
-
-        .post-tag {
-            color: var(--accent-4);
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .post-title {
-            font-size: 1.15rem;
-            margin-bottom: 15px;
-            line-height: 1.4;
-            color: white;
-        }
-
-        .post-excerpt {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .post-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--card-border);
-            padding-top: 15px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            gap: 10px;
-        }
-
-        /* MEDIA QUERIES UNTUK TAMPILAN MOBILE & TABLET */
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 15px;
-            }
-            
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            
-            .hero-img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-text h2 {
-                font-size: 1.2rem;
-            }
-
-            .hero-text p {
-                font-size: 1rem;
-            }
-            
-            .social-links {
-                justify-content: center;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-                margin-bottom: 20px;
-            }
-
-            .glass-card {
-                padding: 20px;
-            }
-
-            .post-footer {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        
-        /* Ekstra kecil untuk HP lipat / jadul */
-        @media (max-width: 480px) {
-            .hero-text h1 {
-                font-size: 1.8rem;
-            }
-            .skill-badge {
-                font-size: 0.85rem;
-                padding: 6px 14px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10141c">
+  <meta name="description" content="Portofolio Alvian Nur Firdaus — Software Engineer dan IoT Engineer yang membangun solusi web, mobile, dan sistem terhubung.">
+  <meta name="author" content="Alvian Nur Firdaus">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alvianfirdaus.github.io/">
+  <meta property="og:title" content="Alvian Nur Firdaus | Software & IoT Engineer">
+  <meta property="og:description" content="Membangun solusi digital yang terukur dan berdampak, dari aplikasi hingga perangkat IoT.">
+  <meta property="og:image" content="https://alvianfirdaus.github.io/alvian.png">
+  <title>Alvian Nur Firdaus | Software & IoT Engineer</title>
+  <link rel="icon" type="image/png" href="alvian.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-
-    <div class="container">
-        
-        <header class="hero">
-            <img src="alvian.png" alt="Alvian Nur Firdaus" class="hero-img" onerror="this.src='https://ui-avatars.com/api/?name=Alvian+Nur+Firdaus&background=0D8ABC&color=fff&size=180'">
-            <div class="hero-text">
-                <h1>Alvian Nur Firdaus</h1>
-                <h2>Software Engineer | IoT Engineer | Beswan Djarum '39</h2>
-                <p>📍 Banyuwangi, Jawa Timur, Indonesia<br>
-                   Membangun inovasi digital yang terukur, efisien, dan berdampak nyata bagi masyarakat melalui integrasi Web Development, Mobile App, dan Internet of Things (IoT).</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/alvian-nur-firdaus" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:alviannurfirdaus1@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:081235026920" class="social-btn"><i class="fas fa-phone"></i></a>
-                </div>
-            </div>
-        </header>
-
-        <div class="grid-2">
-            <div class="glass-card">
-                <h2 class="section-title">Ringkasan</h2>
-                <p style="color: var(--text-muted); text-align: justify;">
-                    Sebagai seorang <strong>Software Engineer</strong>, saya memiliki pengalaman dalam mengembangkan aplikasi web, mobile, serta sistem berbasis <strong>Internet of Things (IoT)</strong>. Saya telah merancang dan mengembangkan lebih dari tiga sistem yang bertujuan meningkatkan efisiensi kerja dan mendukung proses digitalisasi dalam organisasi.
-                    <br><br>
-                    Saya memiliki kemampuan kepemimpinan, manajemen waktu, dan komunikasi yang efektif. Saat ini saya mencari peluang di perusahaan teknologi atau startup untuk tumbuh bersama dan mengembangkan keterampilan saya di bidang IT.
-                </p>
-            </div>
-
-            <div class="glass-card">
-                <h2 class="section-title">Keahlian & Sertifikasi</h2>
-                <div class="skills-wrapper">
-                    <span class="skill-badge"><i class="fas fa-code"></i> Web Development</span>
-                    <span class="skill-badge"><i class="fab fa-android"></i> Android Development</span>
-                    <span class="skill-badge"><i class="fas fa-microchip"></i> Internet of Things (IoT)</span>
-                    <span class="skill-badge"><i class="fab fa-laravel"></i> Laravel</span>
-                    <span class="skill-badge"><i class="fas fa-mobile-alt"></i> Flutter</span>
-                    <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
-                    <span class="skill-badge"><i class="fas fa-microchip"></i> Arduino IDE</span>
-                    <span class="skill-badge"><i class="fab fa-aws"></i> AWS Cloud</span>
-                </div>
-                <br>
-                <h3 style="color: white; font-size: 1.1rem; margin-bottom: 10px;">Sertifikasi Utama:</h3>
-                <ul style="color: var(--text-muted); font-size: 0.95rem; padding-left: 20px;">
-                    <li>AWS Cloud Practitioner Essentials</li>
-                    <li>MIKROTIK MTCNA</li>
-                    <li>Belajar Dasar AI (Dicoding)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="glass-card">
-            <h2 class="section-title">Pengalaman Kerja & Organisasi</h2>
-            <div class="grid-2">
-                <div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Nov 2025 - Present</div>
-                        <div class="timeline-title">IoT Specialist</div>
-                        <div class="timeline-subtitle">Aptavis · Bandung</div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Melakukan riset teknologi IoT terbaru, mengembangkan prototype perangkat mulai dari firmware hingga koneksi cloud, dan menguji performa sensor.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">Mar 2025 - Present</div>
-                        <div class="timeline-title">Founder Ijendev.id</div>
-                        <div class="timeline-subtitle">Ijendev.id | Ijend Developer Indonesia · Banyuwangi</div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Founder dari Ijendev. Berhasil menyelesaikan 9+ project mencakup pengembangan web, aplikasi mobile, dan sistem berbasis IoT.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jul 2024 - Des 2024</div>
-                        <div class="timeline-title">Full Stack Engineer</div>
-                        <div class="timeline-subtitle">PT PLN (Persero) · Sidoarjo</div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Pengembangan aplikasi berbasis IoT dan Flutter untuk monitoring tangki BBM pada genset PT PLN UP2B Jatim.</p>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Ags 2023 - Ags 2024</div>
-                        <div class="timeline-title">Awardee Scholarship</div>
-                        <div class="timeline-subtitle">Djarum Beasiswa Plus</div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">Okt 2021 - Feb 2023</div>
-                        <div class="timeline-title">Organizing Committee</div>
-                        <div class="timeline-subtitle">Himpunan Mahasiswa Teknologi Informasi (HMTI) Polinema · Malang</div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jan 2020 - Jul 2020</div>
-                        <div class="timeline-title">Network Engineer</div>
-                        <div class="timeline-subtitle">Dinas Komunikasi dan Informatika · Banyuwangi</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="glass-card">
-            <h2 class="section-title">Pendidikan</h2>
-            <div class="grid-2">
-                <div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jul 2021 - Sep 2025</div>
-                        <div class="timeline-title">Politeknik Negeri Malang</div>
-                        <div class="timeline-subtitle">Gelar Sarjana Terapan (D4), Teknologi Informasi</div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Lulus dengan IPK 3.87.</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Feb 2024 - Jun 2024</div>
-                        <div class="timeline-title">Studi Independen (Kampus Merdeka)</div>
-                        <div class="timeline-subtitle">RevoU x AWS</div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Mempelajari tentang Data Analytics, Cloud Computing (AWS), dan Artificial Intelligence.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="section-title" style="margin-top: 20px;">Aktivitas & Inovasi </h2>
-        <div class="grid-3" id="dynamic-posts-container">
-            </div>
-
-    </div>
-
-    <script>
-        // Data Postingan LinkedIn Anda
-        const linkedinData = [
-            {
-                tag: "#JagoanDigital #Innovation",
-                title: "Jagoan Digital Banyuwangi 2025",
-                excerpt: "Sebuah program pengembangan talenta dan inovasi teknologi dari Pemkab Banyuwangi. Saya bersyukur telah terpilih sebagai Jagoan Digital Banyuwangi 2025. Penghargaan ini menjadi motivasi untuk terus berdampak.",
-                image: "https://media.licdn.com/dms/image/v2/D5622AQFkbgkfxCqxsw/feedshare-shrink_1280/B56ZpuQIekJwAs-/0/1762786320001?e=1783555200&v=beta&t=6SJlokmiyvhA-3jYjNfSlYGHmXd6ktwOjox62p_Xk0I", 
-                location: "Banyuwangi",
-                likes: "104",
-                comments: "13 comments"
-            },
-            {
-                tag: "#SmartFarming #IoT #Sitanam",
-                title: "SITANAM (Smart Precision Farming)",
-                excerpt: "Melalui SITANAM, kami berupaya menghadirkan sistem pertanian cerdas yang membantu petani mengelola lahan dengan lebih efisien, terukur, dan berkelanjutan. Terintegrasi ESP32, Firebase, dan Flutter App.",
-                image: "https://media.licdn.com/dms/image/v2/D5622AQFKvEdiRD_QXg/feedshare-shrink_800/B56ZncUvQRKIAg-/0/1760338074418?e=1783555200&v=beta&t=ZENAmYiFidVwpAJHXRQAIpH4WLq4iZ37iHBuGCokBdc", 
-                location: "Desa Aliyan, Banyuwangi",
-                likes: "100",
-                comments: "8 comments"
-            },
-            {
-                tag: "#CloudInfra #TechCommunity",
-                title: "Dicoding Developer Conference",
-                excerpt: "Dengan bangga menjadi peserta Dicoding Developer Conference, khususnya pada trek AI for Cloud Infra and DevOps. Transisi dari DevOps tradisional menuju AIOps adalah keniscayaan.",
-                image: "https://media.licdn.com/dms/image/v2/D5622AQHJQW-Zsi8xZQ/feedshare-shrink_800/B56Z3ZFuDaGsAg-/0/1777463648720?e=1783555200&v=beta&t=Z6FFcLreeuPcrvcMIgSK61sOOwtzHJpA37lm7j8A8VA", 
-                location: "Tech Event",
-                likes: "31",
-                comments: "4 comments"
-            },
-            {
-                tag: "#KeamananSiber #KMIPNV",
-                title: "Finalis Keamanan Siber KMIPN V",
-                excerpt: "Very grateful and proud to share that we have succeeded in passing a big challenge at KMIPN V at PENS Surabaya. Humbled to announce that we qualified as finalists in this competitive category.",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GRx7ug2Z1NGrysinRTgqr0DaRsh4silsFA&s", 
-                location: "PENS Surabaya",
-                likes: "20",
-                comments: "Finalist"
-            }
-        ];
-
-        // Fungsi Render HTML
-        function renderPosts() {
-            const container = document.getElementById('dynamic-posts-container');
-            if (!container) return; 
-
-            let htmlContent = '';
-
-            linkedinData.forEach(post => {
-                htmlContent += `
-                    <div class="glass-card post-card">
-                        <div class="post-image-wrapper">
-                            <img src="${post.image}" alt="${post.title}">
-                        </div>
-                        <div>
-                            <span class="post-tag">${post.tag}</span>
-                            <h3 class="post-title">${post.title}</h3>
-                            <p class="post-excerpt">${post.excerpt}</p>
-                        </div>
-                        <div class="post-footer">
-                            <span><i class="fas fa-map-marker-alt"></i> ${post.location}</span>
-                            <span><i class="fas fa-heart" style="color: var(--accent-4)"></i> ${post.likes} &nbsp; <i class="fas fa-comment"></i> ${post.comments}</span>
-                        </div>
-                    </div>
-                `;
-            });
-
-            container.innerHTML = htmlContent;
-        }
-
-        // Panggil render saat DOM selesai dimuat
-        document.addEventListener('DOMContentLoaded', renderPosts);
-    </script>
+  <a class="skip-link" href="#beranda">Lewati ke konten</a>
+  <header class="topbar">
+    <div class="window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+    <a class="topbar-brand" href="#beranda"><span class="brand-mark">a.</span> alvian<span class="brand-muted">/portfolio</span></a>
+    <button class="menu-toggle" type="button" aria-label="Buka navigasi" aria-controls="sidebar" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="topbar-right"><span class="topbar-dot"></span> Open to opportunities <span class="topbar-version">v1.0</span></div>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar" id="sidebar" aria-label="Navigasi situs">
+      <div class="sidebar-inner">
+        <div class="sidebar-heading">EXPLORER <span>•••</span></div>
+        <div class="folder-label"><span class="chevron">⌄</span> ALVIAN-FIRDAUS</div>
+        <nav class="file-nav" aria-label="Bagian halaman">
+          <a href="#beranda" class="nav-link active"><span class="file-icon html">◇</span> index.html</a>
+          <a href="#tentang" class="nav-link"><span class="file-icon md">≡</span> about.md</a>
+          <a href="#keahlian" class="nav-link"><span class="file-icon json">{ }</span> skills.json</a>
+          <a href="#proyek" class="nav-link"><span class="file-icon json">{ }</span> projects.json</a>
+          <a href="#pengalaman" class="nav-link"><span class="file-icon md">≡</span> experience.md</a>
+          <a href="#aktivitas" class="nav-link"><span class="file-icon md">≡</span> updates.md</a>
+          <a href="#kontak" class="nav-link"><span class="file-icon mail">@</span> contact.txt</a>
+        </nav>
+        <div class="sidebar-heading sidebar-heading-secondary">CONNECT</div>
+        <nav class="file-nav" aria-label="Tautan sosial">
+          <a href="https://www.linkedin.com/in/alvian-nur-firdaus" target="_blank" rel="noopener noreferrer" class="nav-link"><span class="file-icon social">↗</span> LinkedIn</a>
+          <a href="mailto:alviannurfirdaus1@gmail.com" class="nav-link"><span class="file-icon mail">@</span> Email</a>
+        </nav>
+        <div class="sidebar-profile"><img src="alvian-cutout.png" alt="" width="42" height="42"><div><strong>Alvian Nur Firdaus</strong><span>Banyuwangi, Indonesia</span></div></div>
+      </div>
+    </aside>
+    <main class="main-panel" id="beranda">
+      <div class="editor-tabs" aria-hidden="true"><span class="editor-tab active"><span class="file-icon html">◇</span> index.html <span class="tab-close">×</span></span><span class="editor-tab secondary"><span class="file-icon md">≡</span> about.md</span></div>
+      <div class="breadcrumb">alvian-firdaus <span>›</span> portfolio <span>›</span> <strong>index.html</strong></div>
+      <div class="page-content">
+        <section class="hero section" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> HELLO, WORLD! <span class="eyebrow-path">/ perkenalan</span></div>
+            <p class="hero-greeting">Halo, saya</p>
+            <h1 id="hero-title">Alvian Nur<br><span>Firdaus<span class="cursor">_</span></span></h1>
+            <p class="hero-role"><span class="code-bracket">&lt;</span> Software Engineer <span class="role-divider">/</span> IoT Engineer <span class="code-bracket">/&gt;</span></p>
+            <p class="hero-description">Saya membangun solusi digital yang menghubungkan <strong>ide, aplikasi, dan perangkat</strong> menjadi pengalaman yang berguna. Berbasis di Banyuwangi, terbuka untuk kolaborasi dari mana saja.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#proyek">Jelajahi karya <span>↗</span></a><a class="button button-outline" href="#kontak">Hubungi saya <span>→</span></a></div>
+            <div class="hero-meta"><span><span class="status-indicator"></span> Terbuka untuk peluang</span><span class="meta-separator">/</span><span>Banyuwangi, Jawa Timur</span></div>
+          </div>
+          <div class="hero-visual"><div class="portrait-accent" aria-hidden="true"></div><img class="hero-cutout" src="alvian-cutout.png" alt="Potret Alvian Nur Firdaus" width="1254" height="1254"><span class="portrait-label">ALVIAN NUR FIRDAUS <span>·</span> 01 / PROFILE</span></div>
+        </section>
+        <div class="stats-row" aria-label="Sorotan profil"><div><strong>9<span>+</span></strong><span>Proyek di Ijendev</span></div><div><strong>03</strong><span>Bidang utama</span></div><div><strong>3.87</strong><span>IPK D4 Polinema</span></div><div class="stats-note"><span>// always building</span><strong>WEB · MOBILE · IoT</strong></div></div>
+        <section class="section content-section" id="tentang" aria-labelledby="tentang-title"><div class="section-heading"><div><span class="section-index">01 / ABOUT</span><h2 id="tentang-title">Tentang saya<span class="heading-dot">.</span></h2></div><span class="section-file">about.md</span></div><div class="about-grid"><div class="about-copy"><p>Saya seorang <strong>Software Engineer</strong> dengan pengalaman mengembangkan aplikasi web, mobile, dan sistem berbasis <strong>Internet of Things</strong>. Saya senang mengubah persoalan nyata menjadi produk yang sederhana dipakai dan dapat diandalkan.</p><p>Perjalanan saya mencakup pengembangan solusi monitoring untuk PLN, membangun proyek bersama Ijendev, hingga riset prototipe IoT di Aptavis. Di luar sisi teknis, saya menikmati kerja tim, belajar hal baru, dan berbagi ide dengan komunitas.</p><a class="text-link" href="https://www.linkedin.com/in/alvian-nur-firdaus" target="_blank" rel="noopener noreferrer">Kenali saya di LinkedIn <span>↗</span></a></div><div class="about-card"><div class="code-card-label">const alvian = {</div><div class="code-line"><span>role</span>: <em>"Software &amp; IoT Engineer"</em>,</div><div class="code-line"><span>basedIn</span>: <em>"Banyuwangi, ID"</em>,</div><div class="code-line"><span>interests</span>: [<em>"Web"</em>, <em>"Mobile"</em>, <em>"IoT"</em>],</div><div class="code-line"><span>mindset</span>: <em>"Build with purpose"</em></div><div class="code-card-label">}</div></div></div></section>
+        <section class="section content-section" id="keahlian" aria-labelledby="keahlian-title"><div class="section-heading"><div><span class="section-index">02 / EXPERTISE</span><h2 id="keahlian-title">Yang saya kerjakan<span class="heading-dot">.</span></h2></div><span class="section-file">skills.json</span></div><p class="section-intro">Dari antarmuka aplikasi sampai perangkat di lapangan, saya bekerja di titik temu software dan dunia nyata.</p><div class="expertise-grid"><article class="expertise-card"><span class="expertise-number">01 /</span><div class="expertise-symbol">&lt;/&gt;</div><h3>Web Development</h3><p>Membangun aplikasi dan sistem web yang membantu proses kerja menjadi lebih terstruktur.</p><div class="tag-list"><span>Laravel</span><span>SQL</span><span>Web Apps</span></div></article><article class="expertise-card"><span class="expertise-number">02 /</span><div class="expertise-symbol">▣</div><h3>Mobile Development</h3><p>Menghadirkan informasi dan kendali sistem melalui aplikasi mobile yang mudah digunakan.</p><div class="tag-list"><span>Flutter</span><span>Android</span><span>Firebase</span></div></article><article class="expertise-card"><span class="expertise-number">03 /</span><div class="expertise-symbol">⌁</div><h3>Internet of Things</h3><p>Menghubungkan sensor, firmware, cloud, dan aplikasi untuk solusi monitoring yang utuh.</p><div class="tag-list"><span>ESP32</span><span>Arduino</span><span>Cloud</span></div></article></div><div class="cert-line"><span class="cert-label">SERTIFIKASI</span><span>AWS Cloud Practitioner Essentials</span><span>MikroTik MTCNA</span><span>Belajar Dasar AI · Dicoding</span></div></section>
+        <section class="section content-section" id="proyek" aria-labelledby="proyek-title"><div class="section-heading"><div><span class="section-index">03 / SELECTED WORK</span><h2 id="proyek-title">Karya &amp; proyek<span class="heading-dot">.</span></h2></div><span class="section-file">projects.json</span></div><p class="section-intro">Beberapa pekerjaan yang menunjukkan bagaimana saya menggabungkan teknologi dengan kebutuhan nyata.</p><div class="projects-grid"><article class="project-card project-featured"><div class="project-art project-art-farm" aria-hidden="true"><div class="art-grid"></div><div class="art-farm-icon">⌁</div><span class="art-corner">ESP32 / FIREBASE / FLUTTER</span></div><div class="project-body"><div class="project-kicker">01 <span>·</span> SMART FARMING</div><h3>SITANAM</h3><p>Sistem pertanian presisi yang membantu pengelolaan lahan melalui integrasi perangkat ESP32, Firebase, dan aplikasi Flutter.</p><div class="tag-list"><span>IoT</span><span>ESP32</span><span>Flutter</span></div></div></article><article class="project-card"><div class="project-art project-art-energy" aria-hidden="true"><div class="art-grid"></div><div class="art-energy-icon">▥<span>▦</span></div><span class="art-corner">MONITORING / SYSTEM</span></div><div class="project-body"><div class="project-kicker">02 <span>·</span> INDUSTRIAL IoT</div><h3>Monitoring Tangki BBM</h3><p>Aplikasi berbasis IoT dan Flutter untuk memantau tangki BBM genset di PT PLN UP2B Jatim.</p><div class="tag-list"><span>IoT</span><span>Flutter</span><span>Monitoring</span></div></div></article><article class="project-card"><div class="project-art project-art-studio" aria-hidden="true"><div class="art-grid"></div><div class="art-studio-icon">{ <span>i</span> }</div><span class="art-corner">WEB / MOBILE / IoT</span></div><div class="project-body"><div class="project-kicker">03 <span>·</span> PRODUCT STUDIO</div><h3>Ijendev</h3><p>Inisiatif pengembangan digital yang saya dirikan; mengerjakan lebih dari sembilan proyek web, mobile, dan IoT.</p><div class="tag-list"><span>Founder</span><span>Product</span><span>Development</span></div></div></article></div></section>
+        <section class="section content-section" id="pengalaman" aria-labelledby="pengalaman-title"><div class="section-heading"><div><span class="section-index">04 / JOURNEY</span><h2 id="pengalaman-title">Perjalanan saya<span class="heading-dot">.</span></h2></div><span class="section-file">experience.md</span></div><div class="journey-grid"><div><h3 class="column-title"><span>⌁</span> Pengalaman</h3><div class="timeline"><article class="timeline-item"><span class="timeline-date">NOV 2025 — SEKARANG</span><h4>IoT Specialist</h4><span class="timeline-place">Aptavis · Bandung</span><p>Riset teknologi IoT, pengembangan prototipe dari firmware hingga cloud, serta pengujian performa sensor.</p></article><article class="timeline-item"><span class="timeline-date">MAR 2025 — SEKARANG</span><h4>Founder</h4><span class="timeline-place">Ijendev.id · Banyuwangi</span><p>Memimpin pengembangan 9+ proyek di bidang web, mobile, dan sistem IoT.</p></article><article class="timeline-item"><span class="timeline-date">JUL — DES 2024</span><h4>Full Stack Engineer</h4><span class="timeline-place">PT PLN (Persero) · Sidoarjo</span><p>Mengembangkan solusi monitoring tangki BBM genset berbasis IoT dan Flutter.</p></article><article class="timeline-item"><span class="timeline-date">AGS 2023 — AGS 2024</span><h4>Beswan Djarum 39</h4><span class="timeline-place">Djarum Beasiswa Plus</span></article></div></div><div><h3 class="column-title"><span>◇</span> Pendidikan</h3><div class="education-card"><span class="timeline-date">2021 — 2025</span><h4>Politeknik Negeri Malang</h4><p>Sarjana Terapan (D4) · Teknologi Informasi</p><div class="education-score"><strong>3.87</strong><span>IPK</span></div></div><div class="education-card"><span class="timeline-date">FEB — JUN 2024</span><h4>RevoU x AWS</h4><p>Studi Independen · Data Analytics, Cloud Computing, dan Artificial Intelligence.</p></div></div></div></section>
+        <section class="section content-section" id="aktivitas" aria-labelledby="aktivitas-title"><div class="section-heading"><div><span class="section-index">05 / NOTES</span><h2 id="aktivitas-title">Aktivitas &amp; inovasi<span class="heading-dot">.</span></h2></div><span class="section-file">updates.md</span></div><div class="updates-list"><article class="update-item"><span class="update-index">01</span><div><span class="update-category">PENGHARGAAN / 2025</span><h3>Jagoan Digital Banyuwangi</h3><p>Terpilih dalam program pengembangan talenta dan inovasi teknologi Banyuwangi.</p></div><span class="update-arrow" aria-hidden="true">↗</span></article><article class="update-item"><span class="update-index">02</span><div><span class="update-category">INOVASI / IoT</span><h3>SITANAM · Smart Precision Farming</h3><p>Merancang solusi pertanian cerdas yang menggabungkan perangkat, data, dan aplikasi.</p></div><span class="update-arrow" aria-hidden="true">↗</span></article><article class="update-item"><span class="update-index">03</span><div><span class="update-category">KOMPETISI / CYBERSECURITY</span><h3>Finalis Keamanan Siber KMIPN V</h3><p>Menjadi finalis kategori keamanan siber pada KMIPN V di PENS Surabaya.</p></div><span class="update-arrow" aria-hidden="true">↗</span></article></div><a class="text-link updates-link" href="https://www.linkedin.com/in/alvian-nur-firdaus" target="_blank" rel="noopener noreferrer">Lihat aktivitas lainnya di LinkedIn <span>↗</span></a></section>
+        <section class="section contact-section" id="kontak" aria-labelledby="kontak-title"><div class="contact-glow" aria-hidden="true"></div><span class="section-index">06 / LET'S CONNECT</span><h2 id="kontak-title">Ada ide untuk<br><span>dikerjakan bersama?</span></h2><p>Saya terbuka untuk peluang kerja, proyek, dan percakapan seputar software serta IoT. Mari mulai dari sebuah pesan.</p><div class="contact-actions"><a class="button button-primary" href="mailto:alviannurfirdaus1@gmail.com">Kirim email <span>↗</span></a><a class="button button-outline" href="https://www.linkedin.com/in/alvian-nur-firdaus" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a></div><span class="contact-email">alviannurfirdaus1@gmail.com</span></section>
+        <footer class="footer"><span>© <span id="year">2026</span> Alvian Nur Firdaus</span><span>Built with curiosity &amp; code <span class="footer-spark">✳</span></span><a href="#beranda">Kembali ke atas ↑</a></footer>
+      </div>
+    </main>
+  </div>
+  <div class="statusbar"><span><span class="statusbar-icon">◇</span> alvian-firdaus / portfolio</span><span>HTML <span class="statusbar-divider">·</span> UTF-8 <span class="statusbar-divider">·</span> Indonesia</span></div>
 </body>
 </html>
